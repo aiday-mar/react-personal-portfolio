@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Components/Hello';
-import Button from './Components/Button';
+import Hello from './Components/HelloComponent';
+import Button from './Components/ButtonComponent';
 import './style.css';
 import {request} from 'request';
 import {puppeteer} from 'puppeteer';
+import {Greetings} from './Components/GreetingsComponent';
+import ReactDOM from 'react-dom';
 
 class App extends Component {
   constructor() {
@@ -14,6 +16,7 @@ class App extends Component {
     };
 
     // ----
+    /*
     const puppeteer = require('puppeteer');
     // the webiste from which we are scraping
     let bookingUrl = 'https://www.booking.com/city/us/new-york.en-gb.html?utm_source=social&utm_medium=facebook&utm_campaign=pagepost20130602&utm_term=nyc;label=socnet_fb_fp_newyork';
@@ -51,13 +54,14 @@ class App extends Component {
         console.dir(hotelData);
     })();
     // end of scrapper
+    */
   }
 
   render() {
     return (
       <div>
         <Hello name={this.state.name} />
-        <Square/>
+        <Button/>
         <p>
           Start editing to see some magic happen :)
         </p>
