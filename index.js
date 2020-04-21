@@ -7,7 +7,11 @@ import {request} from 'request';
 import {puppeteer} from 'puppeteer';
 //import {Greetings} from './Components/GreetingsComponent';
 import ReactDOM from 'react-dom';
-import Post from './Components/PostComponent'
+import Post from './Components/PostComponent';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import BackgroundImageComponent from './Components/BackgroundImageComponent';
+import { Router, Route } from 'react-router-dom';
+import ViewSlider from 'react-view-slider';
 
 // below we create a map of different key-value pars in the json format
 // and we will display this in the class below
@@ -56,7 +60,7 @@ class App extends Component {
   };
 
   render() {
-
+    
     //const greeting = 'Welcome to your dashboard';
     const subject = "React";
     // this is the default description of what we want to show the user
@@ -89,7 +93,8 @@ class App extends Component {
               -
             </button>
             <p>US Dollar: {this.state.amount}</p>
-        </div>
+        </div>,
+
     ];
   }
 }
@@ -146,7 +151,8 @@ const Euro = ({ amount }) => <p>Euro: {amount * 0.86}</p>;
 
 const Pound = ({ amount }) => <p>Pound: {amount * 0.76}</p>;
 
-render(<App />, document.getElementById('root'));
+// you define the router path when you render the component
+render(<App/>, document.getElementById('root'));
 
 // ----
     /*
