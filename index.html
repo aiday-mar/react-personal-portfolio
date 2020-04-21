@@ -1,17 +1,21 @@
 <head>
-.background-enter {
-transform: translate(100%);
+.slide-container {
+  width: 70%;
+  margin: auto; }
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
 }
-.background-enter.background-enter-active {
-transform: translate(0%);
-transition: transform 1000ms ease-in-out;
-}
-.background-leave {
-transform: translate(0%);
-}
-.background-leave.background-leave-active {
-transform: translate(-100%);
-transition: transform 1000ms ease-in-out;
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
 }
 </head>
 <div id="root"></div>

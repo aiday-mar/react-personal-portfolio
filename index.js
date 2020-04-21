@@ -12,6 +12,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BackgroundImageComponent from './Components/BackgroundImageComponent';
 import { Router, Route } from 'react-router-dom';
 import ViewSlider from 'react-view-slider';
+import { Slide } from 'react-slideshow-image';
 
 // below we create a map of different key-value pars in the json format
 // and we will display this in the class below
@@ -35,6 +36,21 @@ const preload = {
   ]
 }
 
+// -----------------------
+const slideImages = [
+  'https://static.photocdn.pt/images/articles/2018/03/20/articles/2017_8/Natural_Night.jpg',
+  'https://static.photocdn.pt/images/articles/2017/12/11/articles/2017_8/iStock-875430954-min.jpg',
+  'https://i.ytimg.com/vi/zSpyvMdRSlY/maxresdefault.jpg'
+];
+
+const properties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  arrows: true
+}
+// ---------------------------------------
 class App extends Component {
   constructor() {
     super();
@@ -94,7 +110,7 @@ class App extends Component {
             </button>
             <p>US Dollar: {this.state.amount}</p>
         </div>,
-
+        <Slideshow/>,
     ];
   }
 }
@@ -152,6 +168,29 @@ const Euro = ({ amount }) => <p>Euro: {amount * 0.86}</p>;
 const Pound = ({ amount }) => <p>Pound: {amount * 0.76}</p>;
 
 // you define the router path when you render the component
+
+const Slideshow = () => {
+    return (
+      <Slide {...properties}>
+        <div className="each-slide" display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
+              <div style={{'backgroundImage': `url(${slideImages[0]})`}} display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
+                <span>Slide 1</span>
+              </div>
+            </div>
+            <div className="each-slide" display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
+              <div style={{'backgroundImage': `url(${slideImages[1]})`}} display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
+                <span>Slide 2</span>
+              </div>
+            </div>
+            <div className="each-slide" display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
+              <div style={{'backgroundImage': `url(${slideImages[2]})`}} display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
+            <span>Slide 3</span>
+          </div>
+        </div>
+      </Slide>
+    )
+}
+
 render(<App/>, document.getElementById('root'));
 
 // ----
