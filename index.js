@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Components/HelloComponent';
-import Button from './Components/ButtonComponent';
+import ButtonClick from './Components/ButtonComponent';
 import './style.css';
 import {request} from 'request';
 import {puppeteer} from 'puppeteer';
-import {Greetings} from './Components/GreetingsComponent';
+//import {Greetings} from './Components/GreetingsComponent';
 import ReactDOM from 'react-dom';
+import Post from './Components/PostComponent'
+
+// below we create a map of different key-value pars in the json format
+// and we will display this in the class below
+const preload = {
+  "data" : [
+    {
+      "name": "Reactjs",
+      "url": "https://reactjs.org",
+      "description": "A JavaScript library for building user interfaces",
+    },
+    {
+      "name": "Vuejs",
+      "url": "https://vuejs.org",
+      "description": "The Progressive JavaScript Framework",
+    },
+    {
+      "name": "Emberjs",
+      "url": "https://www.emberjs.com",
+      "description": "Ember.js is an open-source JavaScript web framework, based on the Model–view–viewmodel pattern"
+    }
+  ]
+}
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React'
+      name: 'React', 
+      isShow: true,
     };
 
     // ----
@@ -56,19 +80,39 @@ class App extends Component {
     // end of scrapper
     */
   }
+ 
+ // here we have this function called toggleShow, when it is called, we change the state of the current instance and set the isShow variable to the oppposite value of what it is.
+  toggleShow = () => {
+    this.setState(state => ({ isShow: !state.isShow }));
+  };
 
   render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <Button/>
+
+    const greeting = 'Welcome to your dashboard';
+    return [
+
+        <Hello name={this.state.name} />,
+        <ButtonClick/>,
         <p>
           Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
+        </p>,
+        // dependin on the state we show or not the greetings, and we can change the state by clicking on the button
+        <div>
+        {this.state.isShow ? <Greeting greeting={greeting} /> : null}
+        <Button onClick={this.toggleShow} />
+        </div>,
+        //<Post items={preload} />,
+    ];
   }
 }
+
+const Button = ({ onClick }) => (
+  <button onClick={onClick} type="button">
+    Toggle Show
+  </button>
+);
+
+const Greeting = ({ greeting }) => <h1>{greeting}</h1>;
 
 render(<App />, document.getElementById('root'));
 
@@ -164,3 +208,5 @@ request("https://www.reddit.com", function(error, response, body) {
 
 });
 */
+
+
