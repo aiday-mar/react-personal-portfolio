@@ -37,6 +37,7 @@ class App extends Component {
     this.state = {
       name: 'React', 
       isShow: true,
+      amount: 0, // in this way of writing you do not have to define the type of the variable
     };
 
   }
@@ -44,6 +45,14 @@ class App extends Component {
  // here we have this function called toggleShow, when it is called, we change the state of the current instance and set the isShow variable to the oppposite value of what it is.
   toggleShow = () => {
     this.setState(state => ({ isShow: !state.isShow }));
+  };
+
+  // here you have functions defined inside the component.
+  onIncrement = () => {
+      this.setState(state => ({ amount: state.amount + 1 }));
+  };
+  onDecrement = () => {
+    this.setState(state => ({ amount: state.amount - 1 }));
   };
 
   render() {
@@ -72,6 +81,15 @@ class App extends Component {
         </div>,
         // in the above the Button component renders the button but the function changing the state is defined in the class itself.
         //<Post items={preload} />,
+         <div>
+            <button type="button" onClick={this.onIncrement}>
+              +
+            </button>
+            <button type="button" onClick={this.onDecrement}>
+              -
+            </button>
+            <p>US Dollar: {this.state.amount}</p>
+        </div>
     ];
   }
 }
@@ -98,6 +116,35 @@ const Greeting = ({ subject, description }) => {
 // HTML tags 
 const Title = ({ title }) => <h1>{title}</h1>;
 const Description = ({ description }) => <p>{description}</p>;
+
+// --------------
+const User = ({ user }) => (
+  <Profile
+    user={user}
+    avatar={<AvatarRound user={user} />}
+    biography={<BiographyFat user={user} />}
+  />
+);
+const Profile = ({ user, avatar, biography }) => (
+  <div className="profile">
+    <div>{avatar}</div>
+    <div>
+      <p>{user.name}</p>
+      {biography}
+    </div>
+  </div>
+);
+const AvatarRound = ({ user }) => (
+  <img className="round" alt="avatar" src={user.avatarUrl} />
+);
+const BiographyFat = ({ user }) => (
+  <p className="fat">{user.biography}</p>
+);
+
+// here you have short  paragraphs which are returned by these little functions
+const Euro = ({ amount }) => <p>Euro: {amount * 0.86}</p>;
+
+const Pound = ({ amount }) => <p>Pound: {amount * 0.76}</p>;
 
 render(<App />, document.getElementById('root'));
 
