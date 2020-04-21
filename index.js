@@ -39,7 +39,69 @@ class App extends Component {
       isShow: true,
     };
 
-    // ----
+  }
+ 
+ // here we have this function called toggleShow, when it is called, we change the state of the current instance and set the isShow variable to the oppposite value of what it is.
+  toggleShow = () => {
+    this.setState(state => ({ isShow: !state.isShow }));
+  };
+
+  render() {
+
+    //const greeting = 'Welcome to your dashboard';
+    const subject = "React";
+    // this is the default description of what we want to show the user
+    const description = "Earth is our home";
+
+    // we put the return elements in an array but we could also 
+    // put it into a fragment
+    return [
+
+        <Hello name={this.state.name} />,
+        // this is an imported button click from another component
+        <ButtonClick/>,
+        <p>
+          Start editing to see some magic happen :)
+        </p>,
+        // dependin on the state we show or not the greetings, and we can change the state by clicking on the button
+        // depending on the value of the isShow boolen we either render a greeting or not, the greeting is written below
+
+        <div>
+        {this.state.isShow ? <Greeting subject={subject} description={description} /> : null}
+        <Button onClick={this.toggleShow} />
+        </div>,
+        // in the above the Button component renders the button but the function changing the state is defined in the class itself.
+        //<Post items={preload} />,
+    ];
+  }
+}
+
+const Button = ({ onClick }) => (
+  <button onClick={onClick} type="button">
+    Toggle Show
+  </button>
+);
+
+const Greeting = ({ subject, description }) => {
+  // when the subject is null then we make the subject equal to Earth
+  subject = subject || 'Earth';
+  return (
+    // we embed the subject variable into this string 
+    <div>
+      <Title title={`Welcome to ${subject}`} />
+      <Description description={description} />
+    </div>
+  );
+};
+
+// we return the variable value but we return it in the corresponding 
+// HTML tags 
+const Title = ({ title }) => <h1>{title}</h1>;
+const Description = ({ description }) => <p>{description}</p>;
+
+render(<App />, document.getElementById('root'));
+
+// ----
     /*
     const puppeteer = require('puppeteer');
     // the webiste from which we are scraping
@@ -79,44 +141,6 @@ class App extends Component {
     })();
     // end of scrapper
     */
-  }
- 
- // here we have this function called toggleShow, when it is called, we change the state of the current instance and set the isShow variable to the oppposite value of what it is.
-  toggleShow = () => {
-    this.setState(state => ({ isShow: !state.isShow }));
-  };
-
-  render() {
-
-    const greeting = 'Welcome to your dashboard';
-    return [
-
-        <Hello name={this.state.name} />,
-        <ButtonClick/>,
-        <p>
-          Start editing to see some magic happen :)
-        </p>,
-        // dependin on the state we show or not the greetings, and we can change the state by clicking on the button
-        <div>
-        {this.state.isShow ? <Greeting greeting={greeting} /> : null}
-        <Button onClick={this.toggleShow} />
-        </div>,
-        //<Post items={preload} />,
-    ];
-  }
-}
-
-const Button = ({ onClick }) => (
-  <button onClick={onClick} type="button">
-    Toggle Show
-  </button>
-);
-
-const Greeting = ({ greeting }) => <h1>{greeting}</h1>;
-
-render(<App />, document.getElementById('root'));
-
-
 /*
 const puppeteer = require('puppeteer');
 
