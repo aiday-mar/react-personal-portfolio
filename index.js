@@ -12,7 +12,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BackgroundImageComponent from './Components/BackgroundImageComponent';
 import { Router, Route } from 'react-router-dom';
 import ViewSlider from 'react-view-slider';
-import { Slide } from 'react-slideshow-image';
+import {Fade } from 'react-slideshow-image';
 
 // below we create a map of different key-value pars in the json format
 // and we will display this in the class below
@@ -37,18 +37,20 @@ const preload = {
 }
 
 // -----------------------
-const slideImages = [
-  'https://static.photocdn.pt/images/articles/2018/03/20/articles/2017_8/Natural_Night.jpg',
-  'https://static.photocdn.pt/images/articles/2017/12/11/articles/2017_8/iStock-875430954-min.jpg',
-  'https://i.ytimg.com/vi/zSpyvMdRSlY/maxresdefault.jpg'
+const fadeImages  = [
+  'https://i.ytimg.com/vi/oonOU78WGqM/hqdefault.jpg',
+  'https://i.ytimg.com/vi/yvYOcG9cdQw/hqdefault.jpg',
+  'https://www.design.iastate.edu/wp-content/uploads/2017/11/RuralHealth-360x360.jpg'
 ];
 
-const properties = {
+const fadeProperties = {
   duration: 5000,
   transitionDuration: 500,
-  infinite: true,
+  infinite: false,
   indicators: true,
-  arrows: true
+  onChange: (oldIndex, newIndex) => {
+    console.log(`fade transition from ${oldIndex} to ${newIndex}`);
+  }
 }
 // ---------------------------------------
 class App extends Component {
@@ -170,25 +172,30 @@ const Pound = ({ amount }) => <p>Pound: {amount * 0.76}</p>;
 // you define the router path when you render the component
 
 const Slideshow = () => {
-    return (
-      <Slide {...properties}>
-        <div className="each-slide" display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
-              <div style={{'backgroundImage': `url(${slideImages[0]})`}} display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
-                <span>Slide 1</span>
-              </div>
-            </div>
-            <div className="each-slide" display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
-              <div style={{'backgroundImage': `url(${slideImages[1]})`}} display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
-                <span>Slide 2</span>
-              </div>
-            </div>
-            <div className="each-slide" display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
-              <div style={{'backgroundImage': `url(${slideImages[2]})`}} display="flex" align-items="center" justify-content="center" background-size="cover" height="300px">
-            <span>Slide 3</span>
+  return (
+    <div className="slide-container">
+      <Fade {...fadeProperties}>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={fadeImages[0]} />
           </div>
+          <h2>First Slide</h2>
         </div>
-      </Slide>
-    )
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={fadeImages[1]} />
+          </div>
+          <h2>Second Slide</h2>
+        </div>
+        <div className="each-fade">
+          <div className="image-container">
+            <img src={fadeImages[2]} />
+          </div>
+          <h2>Third Slide</h2>
+        </div>
+      </Fade>
+    </div>
+  )
 }
 
 render(<App/>, document.getElementById('root'));
