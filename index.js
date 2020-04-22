@@ -13,7 +13,7 @@ import BackgroundImageComponent from './Components/BackgroundImageComponent';
 import { Router, Route } from 'react-router-dom';
 import ViewSlider from 'react-view-slider';
 import {Fade } from 'react-slideshow-image';
-import WeatherApp from './Components/WeatherApp';
+import MovieApp from './Components/MovieApp';
 
 
 // below we create a map of different key-value pars in the json format
@@ -201,7 +201,7 @@ const Slideshow = () => {
 }
 
 render(<App/>, document.getElementById('root'));
-ReactDOM.render(<WeatherApp />, document.getElementById('app'));
+ReactDOM.render(<MovieApp />, document.getElementById('app'));
 
 // ----
     /*
