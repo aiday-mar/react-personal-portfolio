@@ -14,7 +14,7 @@ import { Router, Route } from 'react-router-dom';
 import ViewSlider from 'react-view-slider';
 import {Fade } from 'react-slideshow-image';
 import MovieApp from './Components/MovieApp';
-
+import './styles/app.scss';
 
 // below we create a map of different key-value pars in the json format
 // and we will display this in the class below
