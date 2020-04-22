@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Movies from './Movie/Movies';
+import Movies from './Movie/Movie';
 
 export default class MovieApp extends Component {
 
@@ -15,7 +14,6 @@ export default class MovieApp extends Component {
     render() {
         return (
             <div>
-                <Header title={this.state.title} />
                 <div className="mt-5">
                     <Movies />
                 </div>

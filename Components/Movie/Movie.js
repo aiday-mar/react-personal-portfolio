@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MovieList from './MovieList';
-import MovieService from '../../services/MovieService';
+import MovieService from '../../Services/MovieService';
 
 export default class Movies extends Component {
 
