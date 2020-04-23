@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-class Search extends React.Component {
+export default class Search extends React.Component {
   constructor(props) {
     super(props); // initiate the upper class with the properties
     this.state = { // initiate the state of the class with a list of strings
@@ -105,7 +105,7 @@ class Search extends React.Component {
       <div className="content">
         <div className="container">
           <section className="section">
-            <List items={this.state.list} delete={this.removeItem} />
+            <List items={this.state.list} delete={this.removeItem} onchange={this.handleChange}/>
           </section>
           <hr />
           <section className="section">
@@ -123,15 +123,17 @@ class Search extends React.Component {
 }
 
 // we have several components in one file, and the second one we write it so that it is extending the React library. We also have a render function.
-class List extends React.Component {
+export class List extends React.Component {
 
   // constructor needed in order to pass props
   // We need to pass data into our filtered state every time the List component gets re-rendered.
   constructor(props) {
-        super(props);
-        this.state = {
-          filtered: [],
-        }
+    super(props);
+    this.state = {
+      filtered: [],
+    }
+    this.handleChange = this.handleChange.bind(this);
+    //this.arraysEqual = this.arraysEqual.bind(this);
   }
 
   componentDidMount() {
@@ -139,30 +141,76 @@ class List extends React.Component {
       filtered: this.props.items
     });
   }
+/*
+  arraysEqual(a, b) {
+    if (a === b) return true;
+    if (a == null || b == null) return false;
+    if (a.length != b.length) return false;
+
+    for (var i = 0; i < a.length; ++i) {
+      if (a[i] !== b[i]) return false;
+    }
+    return true;
+  }
+*/
 
   componentDidUpdate(nextProps) {
+    this.state.filtered = nextProps.items;
+  }
+  
+
+  handleChange(e) {
+		// Variable to hold the original version of the list
+    let currentList = [];
+		// Variable to hold the filtered list before putting into state
+    let newList = [];
+
+		// If the search bar isn't empty
+    if (e.target.value !== "") {
+			// Assign the original list to currentList
+      currentList = this.props.items;
+
+			// Use .filter() to determine which items should be displayed
+			// based on the search terms
+      newList = currentList.filter(item => {
+				// change current item to lowercase
+        const lc = item.toLowerCase();
+				// change search term to lowercase
+        const filter = e.target.value.toLowerCase();
+				// check to see if the current list item includes the search term
+				// If it does, it will be added to newList. Using lowercase eliminates
+				// issues with capitalization in search terms and search content
+        return lc.includes(filter);
+      });
+    } else {
+			// If the search bar is empty, set newList to original task list
+      newList = this.props.items;
+    }
+		// Set the filtered state based on what our rules added to newList
     this.setState({
-      filtered: nextProps.items
+      filtered: newList
     });
   }
 
   // here in the render method below 
   // We don't have a method called removeItem within this component, so clicking the button doesn't call anything. Fortunately, we had the foresight to pass that method into this component as a prop. To regain the delete functionality, we can just alter the code for that button to the following:
 
+  //onChange={()=>this.props.onchange()}
+
   render() {
-    return
+    return(
     <div>
-      <input type="text" className="input" placeholder="Search..." onChange={this.handleChange}/>
+      <input type="text" className="input" placeholder="Search..." onChange={this.handleChange}
+      />
       <ul>
-        {this.state.list.map(item => (
+        {this.props.items.map(item => (
           <li key={item}>
             {item} &nbsp;
-            <span className="delete" onClick={() => this.props.delete(item)} />
+            <span className="delete" onClick={(item) => this.props.delete(item)} />
           </li>
         ))}
       </ul>
-    </div>
+    </div>)
   }
 }
 
-ReactDOM.render(<Search />, document.getElementById('search'))
