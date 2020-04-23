@@ -203,7 +203,7 @@ export class List extends React.Component {
       <input type="text" className="input" placeholder="Search..." onChange={this.handleChange}
       />
       <ul>
-        {this.props.items.map(item => (
+        {this.state.filtered.map(item => (
           <li key={item}>
             {item} &nbsp;
             <span className="delete" onClick={(item) => this.props.delete(item)} />
