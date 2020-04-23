@@ -15,6 +15,7 @@ import ViewSlider from 'react-view-slider';
 import {Fade } from 'react-slideshow-image';
 import MovieApp from './Components/MovieApp';
 import './styles/app.scss';
+import Search from './Components/SearchComponent';
 
 // below we create a map of different key-value pars in the json format
 // and we will display this in the class below
@@ -200,6 +201,7 @@ const Slideshow = () => {
   )
 }
 
+render(<Search/>, document.getElementById('search'));
 render(<App/>, document.getElementById('root'));
 ReactDOM.render(<MovieApp />, document.getElementById('app'));
 
