@@ -91,7 +91,8 @@ class App extends Component {
     // put it into a fragment
     return [
 
-        <Hello name={this.state.name} />,
+        <h1>Aiday Marlen Kyzy</h1>,
+        <p> On this website you may find the work I have done in software engineering and data science previously. You can browse by category in the menu above, and click on the various projects. My field of work so far spans development of Android Java apps, React, Angular, Ruby and Django Web apps, as well as ASP .NET apps written in C#. In the field of data analysis I have worked with R and Python, as well as the ML.NET libarary part of the ASP .NET Core framework.</p>,
         // this is an imported button click from another component
         <ButtonClick/>,
         <p>
