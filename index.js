@@ -92,31 +92,7 @@ class App extends Component {
     return [
 
         <h1>Aiday Marlen Kyzy</h1>,
-        <p> On this website you may find the work I have done in software engineering and data science previously. You can browse by category in the menu above, and click on the various projects. My field of work so far spans development of Android Java apps, React, Angular, Ruby and Django Web apps, as well as ASP .NET apps written in C#. In the field of data analysis I have worked with R and Python, as well as the ML.NET libarary part of the ASP .NET Core framework.</p>,
-        // this is an imported button click from another component
-        <ButtonClick/>,
-        <p>
-          Start editing to see some magic happen :)
-        </p>,
-        // dependin on the state we show or not the greetings, and we can change the state by clicking on the button
-        // depending on the value of the isShow boolen we either render a greeting or not, the greeting is written below
-
-        <div>
-        {this.state.isShow ? <Greeting subject={subject} description={description} /> : null}
-        <Button onClick={this.toggleShow} />
-        </div>,
-        // in the above the Button component renders the button but the function changing the state is defined in the class itself.
-        //<Post items={preload} />,
-         <div>
-            <button type="button" onClick={this.onIncrement}>
-              +
-            </button>
-            <button type="button" onClick={this.onDecrement}>
-              -
-            </button>
-            <p>US Dollar: {this.state.amount}</p>
-        </div>,
-        <Slideshow/>,
+        <p> On this website you may find the work I have done in software engineering and data science previously. You can browse by category in the menu above, and click on the various projects. My field of work so far spans development of Android Java apps, React, Angular, Ruby and Django Web apps, as well as ASP .NET apps written in C#. In the field of data analysis I have worked with R and Python, as well as the ML.NET libarary part of the ASP .NET Core framework. You can browse the projects I have worked on by clicking on the categories below or the menu above.</p>,
     ];
   }
 }
@@ -205,6 +181,7 @@ const Slideshow = () => {
 render(<Search/>, document.getElementById('search'));
 render(<App/>, document.getElementById('root'));
 ReactDOM.render(<MovieApp />, document.getElementById('app'));
+render(<Slideshow/>, document.getElementById('slideshow'));
 
 // ----
     /*

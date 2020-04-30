@@ -6,11 +6,17 @@ export default class Search extends React.Component {
     super(props); // initiate the upper class with the properties
     this.state = { // initiate the state of the class with a list of strings
       list: [
-        "Singapore",
-        "New-York",
-        "Moscow",
-        "London", 
-        "Sao Paolo",
+        "Android Development",
+        "Angular",
+        "ASP .NET",
+        "Django",
+        "Hadoop",
+        "Java",
+        "R",
+        "React",
+        "Ruby",
+        "Spark",
+        "Kubernetes", 
       ]
   }
   
@@ -108,14 +114,6 @@ export default class Search extends React.Component {
             <List items={this.state.list} delete={this.removeItem} onchange={this.handleChange}/>
           </section>
           <hr />
-          <section className="section">
-            <form className="form" id="addItemForm">
-              <input type="text" className="input" id="addInput" placeholder="A new place to visit" />
-              <button className="button is-info" onClick={this.addItem}>
-                Add Item
-              </button>
-            </form>
-          </section>
         </div>
       </div>
     )
