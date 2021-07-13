@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
 export default class Search extends React.Component {
   constructor(props) {
-    super(props); // initiate the upper class with the properties
-    this.state = { // initiate the state of the class with a list of strings
+    super(props); 
+    this.state = { 
       list: [
         "Android Development",
         "Angular",
