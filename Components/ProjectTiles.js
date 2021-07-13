@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Movies from './Movie/Movie';
 
-export default class MovieApp extends Component {
+export default class ProjectTiles extends Component {
 
     constructor() {
         super();
