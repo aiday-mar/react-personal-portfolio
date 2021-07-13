@@ -1,3 +1,4 @@
+// Filter the necessary imports at the end 
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Components/HelloComponent';
@@ -5,7 +6,6 @@ import ButtonClick from './Components/ButtonComponent';
 import './style.css';
 import {request} from 'request';
 import {puppeteer} from 'puppeteer';
-//import {Greetings} from './Components/GreetingsComponent';
 import ReactDOM from 'react-dom';
 import Post from './Components/PostComponent';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -17,33 +17,12 @@ import MovieApp from './Components/MovieApp';
 import './styles/app.scss';
 import Search from './Components/SearchComponent';
 
-// below we create a map of different key-value pars in the json format
-// and we will display this in the class below
-const preload = {
-  "data" : [
-    {
-      "name": "Reactjs",
-      "url": "https://reactjs.org",
-      "description": "A JavaScript library for building user interfaces",
-    },
-    {
-      "name": "Vuejs",
-      "url": "https://vuejs.org",
-      "description": "The Progressive JavaScript Framework",
-    },
-    {
-      "name": "Emberjs",
-      "url": "https://www.emberjs.com",
-      "description": "Ember.js is an open-source JavaScript web framework, based on the Model–view–viewmodel pattern"
-    }
-  ]
-}
-
-// -----------------------
+// Images in the carrousel are specified here 
+// Square brackets and the links are separated by commas
 const fadeImages  = [
-  'https://i.ytimg.com/vi/oonOU78WGqM/hqdefault.jpg',
-  'https://i.ytimg.com/vi/yvYOcG9cdQw/hqdefault.jpg',
-  'https://www.design.iastate.edu/wp-content/uploads/2017/11/RuralHealth-360x360.jpg'
+  'https://www.redsen-consulting.com/wp-content/uploads/Qu%E2%80%99est-ce-que-le-Big-Data.jpg',
+  'https://i.pinimg.com/originals/ac/79/9a/ac799a3e936973d079afecdc293c6809.jpg',
+  'https://cdn.cdnparenting.com/articles/2020/11/01194956/1588916176.jpg'
 ];
 
 const fadeProperties = {
