@@ -1,3 +1,22 @@
-h1, p {
-  font-family: Lato;
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.NavBar {
+  border-bottom: 1px groove rgb(221, 221, 221);
+}
+#navigation-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+#navigation-li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
