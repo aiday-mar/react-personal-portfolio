@@ -10,8 +10,6 @@ import {
   Link
 } from "react-router-dom";
 
-// export default class Routing extends React.Component
-// not sure if you need export default here since we are rendering it on the same page 
 function Routing() {
   return (
     <Router>
@@ -33,7 +31,6 @@ function Routing() {
         <Switch>
           <Route path="/projects" component={Projects} />
           <Route path="/posts" component={Posts} />
-          <Route path="*" component={NotFound} />
           <Route exact path="/" component={Main} />
         </Switch>
       </div>
@@ -43,6 +40,3 @@ function Routing() {
 
 render(<Routing/>, document.getElementById('routing'))
 
-function NotFound() {
-  return <>You have landed on a page that doesn't exist</>;
-}
