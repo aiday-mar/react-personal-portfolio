@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Main from './Components/Main/Main';
+import Posts from './Components/Posts/Posts';
+import Projects from './Components/Projects/Projects';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,54 +10,39 @@ import {
   Link
 } from "react-router-dom";
 
-export default class Routing extends React.Component {
-  render() {
-    return (
-      <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/users">Users</Link>
-              </li>
-            </ul>
-          </nav>
+// export default class Routing extends React.Component
+// not sure if you need export default here since we are rendering it on the same page 
+function Routing() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/posts">Posts</Link>
+            </li>
+            <li>
+              <Link to="/projects">Projects</Link>
+            </li>
+          </ul>
+        </nav>
 
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/users">
-              <Users />
-            </Route>
-            <Route path="/">
-              <Main />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    );
-  }
-}
-
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
+        <Switch>
+          <Route path="/projects" component={Projects} />
+          <Route path="/posts" component={Posts} />
+          <Route path="*" component={NotFound} />
+          <Route exact path="/" component={Main} />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 render(<Routing/>, document.getElementById('routing'))
-// render(<Intro/>, document.getElementById('root'));
-// render(<Search/>, document.getElementById('search'));
-// render(<Slides/>, document.getElementById('slideshow'));
+
+function NotFound() {
+  return <>You have landed on a page that doesn't exist</>;
+}
