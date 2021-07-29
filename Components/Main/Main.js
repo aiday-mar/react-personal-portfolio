@@ -7,10 +7,11 @@ import Demo from './Demo';
 // export default class Routing extends React.Component
 export default function Main() {
   
-  return([     
+  return([  
+    <Demo />,   
     <Intro/>,
     <Search/>,
     <Slides/>,
-    <Demo />
+    
   ])
 }
