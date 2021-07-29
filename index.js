@@ -33,19 +33,3 @@ function Routing() {
 }
 
 render(<Routing/>, document.getElementById('routing'))
-
-/*
-<nav class="navigation">
-          <ul>
-            <li>
-              <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000' }} to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000' }} to="/posts">Posts</NavLink>
-            </li>
-            <li>
-              <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000' }} to="/projects">Projects</NavLink>
-            </li>
-          </ul>
-        </nav>
-        */

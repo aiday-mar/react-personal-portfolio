@@ -12,13 +12,13 @@ const NavBar = () => {
       <div className="NavBar">
         <ul id="navigation-ul">
           <li id="navigation-li">
-            <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000' }} to="/">Home</NavLink>
+            <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000', textDecoration: 'none'}} to="/">Home</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000' }} to="/posts">Posts</NavLink>
+            <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000', textDecoration: 'none'}} to="/posts">Posts</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000' }} to="/projects">Projects</NavLink>
+            <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000', textDecoration: 'none'}} to="/projects">Projects</NavLink>
           </li>
         </ul>
       </div>
