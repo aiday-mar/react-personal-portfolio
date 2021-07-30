@@ -10,36 +10,16 @@ import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 
+// Grow - Material UI
 const useStyles = makeStyles((theme) => ({
-  root: {
-    height: 1/3,
-  },
   container: {
     display: 'flex',
-  },
-  paper: {
-    margin: theme.spacing(1.2),
-  },
-  svg: {
-    width: 200,
-    height: 200,
-  },
-  polygon: {
-    fill: theme.palette.common.white,
-    stroke: theme.palette.divider,
-    strokeWidth: 1,
+    alignItems: 'center',
+    justify: 'center'
   },
 }));
 
-// --- CARD
-
-const faces = [
-  "http://i.pravatar.cc/300?img=1",
-  "http://i.pravatar.cc/300?img=2",
-  "http://i.pravatar.cc/300?img=3",
-  "http://i.pravatar.cc/300?img=4"
-];
-
+// Card - Material UI
 const styles = muiBaseTheme => ({
   card: {
     maxWidth: 300,
@@ -48,17 +28,14 @@ const styles = muiBaseTheme => ({
     boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
     "&:hover": {
       boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)"
-    }
+    },
   },
   media: {
-    paddingTop: "56.25%"
+    paddingTop: "56.25%",
   },
   content: {
     textAlign: "left",
     padding: muiBaseTheme.spacing.unit * 3
-  },
-  divider: {
-    margin: `${muiBaseTheme.spacing.unit * 3}px 0`
   },
   heading: {
     fontWeight: "bold"
@@ -66,19 +43,10 @@ const styles = muiBaseTheme => ({
   subheading: {
     lineHeight: 1.8
   },
-  avatar: {
-    display: "inline-block",
-    border: "2px solid white",
-    "&:not(:first-of-type)": {
-      marginLeft: -muiBaseTheme.spacing.unit
-    }
-  }
 });
 
-
-function App({ classes }) {
+function CardPannelLeft({ classes }) {
   return (
-    <div className="App">
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
@@ -92,50 +60,99 @@ function App({ classes }) {
             variant={"h6"}
             gutterBottom
           >
-            Nature Around Us
+            Card 1 
           </Typography>
           <Typography
             className={"MuiTypography--subheading"}
             variant={"caption"}
           >
-            We are going to learn different kinds of species in nature that live
-            together to form amazing environment.
+            Project number one is done. Add the text corresponding to this card.
           </Typography>
-          <Divider className={classes.divider} light />
-          {faces.map(face => (
-            <Avatar className={classes.avatar} key={face} src={face} />
-          ))}
         </CardContent>
       </Card>
-    </div>
   );
 }
 
-const WrappedApp = withStyles(styles)(App);
-// ---
+function CardPannelMiddle({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          }
+        />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom
+          >
+            Card 2 
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"}
+          >
+            Project number second is done. Add the text corresponding to this card.
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+
+function CardPannelRight({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          }
+        />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom
+          >
+            Card 3
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"}
+          >
+            Project number third is done. Add the text corresponding to this card.
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+const CardLeft = withStyles(styles)(CardPannelLeft);
+const CardMiddle = withStyles(styles)(CardPannelMiddle);
+const CardRight = withStyles(styles)(CardPannelRight);
+
+// --
 
 export default function SimpleGrow() {
   const classes = useStyles();
   const [checked, setchecked] = React.useState(true);
 
   return (
-    // the root sub description in the classes variable 
     <div className={classes.root}>
       <div className={classes.container}>
         <Grow in={checked}>
-          <WrappedApp/>
+          <CardLeft/>
         </Grow>
         <Grow
           in={checked}
-          style={{ transformOrigin: '0 0 0' }}
           {...(checked ? { timeout: 1000 } : {})}>
-          <WrappedApp/>
+          <CardMiddle/>
         </Grow>
         <Grow
           in={checked}
-          style={{ transformOrigin: '0 0 0' }}
           {...(checked ? { timeout: 2000 } : {})}>
-          <WrappedApp/>
+          <CardRight/>
         </Grow>
       </div>
     </div>
