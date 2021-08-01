@@ -1,5 +1,6 @@
 import React from 'react';
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
+const colors = ["#f7e4ee", "#f7e4ee", "#f7e4ee"];
+const text = ["On this website you may find the work I have done in software engineering and data science previously. My field of work so far spans development of Android Java apps, React, Angular, Ruby and Django Web apps, as well as ASP .NET apps written in C#. In the field of data analysis I have worked with R and Python, as well as the ML.NET library part of the ASP .NET Core framework.", "I have obtained a masters in computational science at EPFL and am passionate about web design", "Aiday Marlen Kyzy"]
 // 5 seconds before the next slide is shown
 const delay = 5000;
 
@@ -39,11 +40,9 @@ export default function Slideshow() {
     <div className="slideshow">
       <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
         {colors.map((backgroundColor, index) => (
-          <div
-            className="slide"
-            key={index}
-            style={{ backgroundColor }}
-          ></div>
+          <div className="slide" key={index} style={{ backgroundColor }}>
+            {text[index]}
+          </div>
         ))}
       </div>
       

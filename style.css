@@ -26,7 +26,7 @@
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
-  max-width: 500px;
+  max-width: 75%;
 }
 
 .slideshowSlider {
@@ -36,10 +36,8 @@
 
 .slide {
   display: inline-block;
-
   height: 400px;
   width: 100%;
-  border-radius: 40px;
 }
 
 /* Buttons */
