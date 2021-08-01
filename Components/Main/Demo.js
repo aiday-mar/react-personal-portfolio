@@ -4,16 +4,21 @@ import Grow from '@material-ui/core/Grow';
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
+import Paper from "@material-ui/core/Paper";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
 // Grow - Material UI
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     alignItems: 'center',
-    justify: 'center'
+    justify: 'center',
+  },
+  paper: {
+    margin: theme.spacing(1),
   },
 }));
 
@@ -126,31 +131,31 @@ function CardPannelRight({ classes }) {
       </Card>
   );
 }
+
 const CardLeft = withStyles(styles)(CardPannelLeft);
 const CardMiddle = withStyles(styles)(CardPannelMiddle);
 const CardRight = withStyles(styles)(CardPannelRight);
 
-// --
-
-export default function SimpleGrow() {
+export default function CardsGrow() {
   const classes = useStyles();
-  const [checked, setchecked] = React.useState(true);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.wrapper}>
       <div className={classes.container}>
-        <Grow in={checked}>
-          <CardLeft/>
+        <Grow appear={true} in={true}>
+          <Paper elevation={4} className={classes.paper}>
+            <CardLeft/>
+          </Paper>
         </Grow>
-        <Grow
-          in={checked}
-          {...(checked ? { timeout: 1000 } : {})}>
-          <CardMiddle/>
+        <Grow appear={true} in={true} {...(true ? { timeout: 1000 } : {})}>
+          <Paper elevation={4} className={classes.paper}>
+            <CardMiddle/>
+          </Paper>
         </Grow>
-        <Grow
-          in={checked}
-          {...(checked ? { timeout: 2000 } : {})}>
-          <CardRight/>
+        <Grow appear={true} in={true} {...(true ? { timeout: 2000 } : {})}>
+          <Paper elevation={4} className={classes.paper}>
+            <CardRight/>
+          </Paper>
         </Grow>
       </div>
     </div>
