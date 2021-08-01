@@ -1,5 +1,6 @@
 import React from 'react';
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
+// 5 seconds before the next slide is shown
 const delay = 5000;
 
 export default function Slideshow() {
