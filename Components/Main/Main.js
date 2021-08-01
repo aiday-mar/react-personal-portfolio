@@ -8,8 +8,8 @@ import Demo from './Demo';
 export default function Main() {
   
   return([  
-    <Demo />,   
     <Intro/>,
+    <Demo />,   
     // <Search />,
     // <Slides/>,
   ])
