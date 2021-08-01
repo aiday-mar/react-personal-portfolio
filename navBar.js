@@ -20,6 +20,9 @@ const NavBar = () => {
           <li id="navigation-li">
             <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000', textDecoration: 'none'}} to="/projects">Projects</NavLink>
           </li>
+          <li id="navigation-li">
+            <NavLink activeStyle={{ color:'#000000' }} style={{ color: '#000000', textDecoration: 'none'}} to="/contact">Contact</NavLink>
+          </li>
         </ul>
       </div>
     </div>
