@@ -6,10 +6,13 @@ import Demo from './Demo';
 import Slideshow from './Slideshow';
  
 // export default class Routing extends React.Component
-export default function Main() {
+// export default function Main()
+export default class Main extends React.Component {
   
-  return([  
-    <Slideshow />,
-    <Demo />, 
-  ])
+  render() {
+    return([  
+      <Slideshow />,
+      <Demo />, 
+    ])
+  }
 }

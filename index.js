@@ -13,10 +13,21 @@ import {
 import NavBar from "./navBar.js";
 import "./style.css"
 
-function Routing() {
-  return (
-    <div className="App">
+class Routing extends React.Component {
+  
+  constructor() {
+    super()
+    this.state = {
+      animate : true,
+    }
+  }
+
+  render() {
+    return(
       <div className="Body">
+        <div className="tracking-in-expand">
+          Portfolio TO CHANGE
+        </div>
         <Router>
           <div>
             <NavBar/>
@@ -28,8 +39,21 @@ function Routing() {
           </div>
         </Router>
       </div>
-    </div> 
-  );
+    )
+  }
+
+  componentDidMount() {
+    if(window.sessionStorage.getItem("firstLoadDone") === null) {
+      this.setState({
+        animate : true,
+      })
+      window.sessionStorage.setItem("firstLoadDone", 1)
+    } else {
+      this.setState({
+        animate : true,
+      })
+    }
+  }
 }
 
 render(<Routing/>, document.getElementById('routing'))
