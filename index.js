@@ -24,6 +24,8 @@ class Routing extends React.Component {
 
   render() {
     return(
+      // if animate is TRUE we return component which shows animation and then goes to main page, otherwise just show
+      // the main page
       <div className="Body">
         <div className="tracking-in-expand">
           Portfolio TO CHANGE
