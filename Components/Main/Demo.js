@@ -13,6 +13,7 @@ import Box from "@material-ui/core/Box";
 // Grow - Material UI
 const useStyles = makeStyles((theme) => ({
   container: {
+    marginTop: 30,
     display: 'flex',
     alignItems: 'center',
     justify: 'center',

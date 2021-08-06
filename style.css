@@ -36,18 +36,18 @@
 
 .slide {
   display: inline-block;
-  height: 400px;
+  height: 200px;
   width: 100%;
-  margin: auto;
-  text-align: center;
-  top: 50%;
 }
 
 .textInSlide {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  margin-left:10%;
+  margin-right:10%;
+  width:80%;
+  height:100%;
+  position:absolute;
+  top:40%;
+  white-space:pre-wrap;
 }
 /* Buttons */
 
@@ -57,8 +57,8 @@
 
 .slideshowDot {
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
 
   cursor: pointer;

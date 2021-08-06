@@ -9,8 +9,7 @@ import Slideshow from './Slideshow';
 export default function Main() {
   
   return([  
-    <Intro/>,
+    <Slideshow />,
     <Demo />, 
-    <Slideshow />
   ])
 }
