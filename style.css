@@ -31,7 +31,7 @@
 
 .slideshowSlider {
   white-space: nowrap;
-  transition: ease 1000ms;
+  transition: ease 5000ms;
 }
 
 .slide {
@@ -45,10 +45,12 @@
   margin-right:10%;
   width:80%;
   height:100%;
-  position:absolute;
-  top:40%;
   white-space:pre-wrap;
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
+
 /* Buttons */
 
 .slideshowDots {
@@ -57,13 +59,11 @@
 
 .slideshowDot {
   display: inline-block;
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
-
   cursor: pointer;
-  margin: 15px 7px 0px;
-
+  margin: 15px 10px 5px;
   background-color: #c4c4c4;
 }
 
