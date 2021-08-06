@@ -11,8 +11,6 @@ export default function Main() {
   return([  
     <Intro/>,
     <Demo />, 
-    // <Search />,
-    // <Slides/>,
     <Slideshow />
   ])
 }
