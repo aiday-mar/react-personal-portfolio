@@ -38,17 +38,16 @@
   display: inline-block;
   height: 400px;
   width: 100%;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  margin: auto;
+  text-align: center;
+  top: 50%;
 }
 
 .textInSlide {
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: pre;
-  word-wrap: break-word;
-  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 /* Buttons */
 
