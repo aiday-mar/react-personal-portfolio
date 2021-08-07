@@ -139,9 +139,10 @@ html {
 
 /* block-$ */
 .block-effect {
-  font-size: calc(8px + 6vw);
+  font-size: 40px;
   text-align : center;
   --td: 3s;
+  font:"Times";
 }
 
 .block-reveal-first {
@@ -154,7 +155,7 @@ html {
   overflow: hidden;
 
   animation: revealBlock 0s var(--t) forwards;
-  --bc: #4040bf; 
+  --bc: #ffe6e6; 
   --d: .1s
 }
 
@@ -168,7 +169,7 @@ html {
   overflow: hidden;
 
   animation: revealBlock 0s var(--t) forwards;
-  --bc: #bf4060; 
+  --bc: #e6ffff; 
   --d: .5s
 }
 

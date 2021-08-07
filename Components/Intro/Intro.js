@@ -9,11 +9,12 @@ export default class Intro extends React.Component {
       <div className="tracking-in-expand">
         Portfolio
       </div>
-
-      <h1 className="block-effect">
+      
+      <br/>
+      <div className="block-effect">
         <div className="block-reveal-first" >Software Development</div>
         <div className="block-reveal-second" >Data Analysis</div>
-      </h1>
+      </div>
 
     </div>
     )
