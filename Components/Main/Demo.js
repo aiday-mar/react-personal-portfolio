@@ -13,13 +13,6 @@ import Box from '@material-ui/core/Box';
 
 // Grow - Material UI
 const useStyles = makeStyles((theme) => ({
-  container: {
-    marginTop: 30,
-    display: 'flex',
-    alignItems: 'center',
-    align: 'center',
-    justify: 'center',
-  },
   paper: {
     margin: theme.spacing(2),
   },
@@ -145,7 +138,7 @@ export default function CardsGrow() {
   const classes = useStyles();
   
   return (
-    <Box display="flex" justifyContent="center">
+    <Box display="flex" justifyContent="center" mt="50px">
       <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
         <Paper elevation={4} className={classes.paper}>
           <CardLeft/>
