@@ -3,13 +3,13 @@ import { render } from 'react-dom';
 import Main from './Components/Main/Main';
 import Posts from './Components/Posts/Posts';
 import Projects from './Components/Projects/Projects';
+import Intro from './Components/Intro/Intro';
 import {
-  NavLink,
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-
+import { useEffect } from 'react';
 import NavBar from "./navBar.js";
 import "./style.css"
 
@@ -19,8 +19,13 @@ class Routing extends React.Component {
     super()
     this.state = {
       animate : true,
+      showIntro : true,
     }
     this.myRef = React.createRef() 
+  }
+
+  handleScrollToElement(event) {
+    window.scrollTo(0, this.myRef.current.offsetTop);
   }
 
   render() {
@@ -28,24 +33,31 @@ class Routing extends React.Component {
       // if animate is TRUE we return component which shows animation and then goes to main page, otherwise just show
       // the main page
       <div className="Body">
-        <div className="animation">
-          <div className="tracking-in-expand">
-            Portfolio
-          </div>
+        { this.state.animate && this.state.showIntro ? <Intro /> : null }
+        <div ref={this.myRef}>
+          <Router>
+            <div>
+              <NavBar/>
+              <Switch>
+                <Route path="/projects" component={Projects} />
+                <Route path="/posts" component={Posts} />
+                <Route exact path="/" component={Main} />
+              </Switch>
+            </div>
+          </Router>
         </div>
-        <Router ref={this.myRef}>
-          <div>
-            <NavBar/>
-            <Switch>
-              <Route path="/projects" component={Projects} />
-              <Route path="/posts" component={Posts} />
-              <Route exact path="/" component={Main} />
-            </Switch>
-          </div>
-        </Router>
       </div>
     )
   }
+
+  /*
+  handleRender = () => {
+    setTimeout(function() {
+      window.scrollTo(0, this.myRef.current.offsetTop);
+    }, 3000);
+  }
+  */
+  // executeScroll = () => this.myRef.current.scrollIntoView()
 
   componentDidMount() {
     if(window.sessionStorage.getItem("firstLoadDone") === null) {
@@ -55,16 +67,19 @@ class Routing extends React.Component {
       window.sessionStorage.setItem("firstLoadDone", 1)
     } else {
       this.setState({
-        animate : true,
+        animate : false,
       })
     }
+    
+    setTimeout(() => {
+      this.myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
-    // scroll to
-    if(this.state.animate == true) {
-      setTimeout(function() {
-        window.scrollTo(0, this.myRef.current.offsetTop);
+      setTimeout(() => {
+        this.state.showIntro = false;
       }, 1000);
-    }
+
+    }, 3000);
+
   }
 }
 
