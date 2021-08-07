@@ -34,6 +34,7 @@ class Routing extends React.Component {
       <div className="Body">
         { this.state.animate && this.state.showIntro ? <Intro /> : null }
         <div ref={this.myRef}>
+          <div style={{fontSize:30, textAlign: "center"}}> Portfolio </div>
           <Router>
             <div>
               <NavBar/>
