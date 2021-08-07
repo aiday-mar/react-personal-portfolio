@@ -12,6 +12,9 @@ import {
 import { useEffect } from 'react';
 import NavBar from "./navBar.js";
 import "./style.css"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 class Routing extends React.Component {
   
@@ -46,16 +49,9 @@ class Routing extends React.Component {
     )
   }
 
-  /*
-  handleRender = () => {
-    setTimeout(function() {
-      window.scrollTo(0, this.myRef.current.offsetTop);
-    }, 3000);
-  }
-  */
-  // executeScroll = () => this.myRef.current.scrollIntoView()
-
   componentDidMount() {
+
+    AOS.init()
     if(window.sessionStorage.getItem("firstLoadDone") === null) {
       this.setState({
         animate : true,

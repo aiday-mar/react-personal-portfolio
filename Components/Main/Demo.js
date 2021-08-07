@@ -8,7 +8,7 @@ import Paper from "@material-ui/core/Paper";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import AOS from 'aos';
 
 // Grow - Material UI
 const useStyles = makeStyles((theme) => ({
@@ -145,21 +145,21 @@ export default function CardsGrow() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <Grow appear={true} in={true} >
+        <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
           <Paper elevation={4} className={classes.paper}>
             <CardLeft/>
           </Paper>
-        </Grow>
-        <Grow appear={true} in={true} {...(true ? { timeout: 1000 } : {})}>
+        </div>
+        <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
           <Paper elevation={4} className={classes.paper}>
             <CardMiddle/>
           </Paper>
-        </Grow>
-        <Grow appear={true} in={true} {...(true ? { timeout: 2000 } : {})}>
+        </div>
+        <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
           <Paper elevation={4} className={classes.paper}>
             <CardRight/>
           </Paper>
-        </Grow>
+        </div>
       </div>
     </div>
   );
