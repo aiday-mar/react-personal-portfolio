@@ -27,8 +27,10 @@ class Routing extends React.Component {
       // if animate is TRUE we return component which shows animation and then goes to main page, otherwise just show
       // the main page
       <div className="Body">
-        <div className="tracking-in-expand">
-          Portfolio TO CHANGE
+        <div className="animation">
+          <div className="tracking-in-expand">
+            Portfolio TO CHANGE
+          </div>
         </div>
         <Router>
           <div>
