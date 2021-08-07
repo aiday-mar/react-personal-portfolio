@@ -24,10 +24,6 @@ class Routing extends React.Component {
     this.myRef = React.createRef() 
   }
 
-  handleScrollToElement(event) {
-    window.scrollTo(0, this.myRef.current.offsetTop);
-  }
-
   render() {
     return(
       // if animate is TRUE we return component which shows animation and then goes to main page, otherwise just show
@@ -73,8 +69,11 @@ class Routing extends React.Component {
     
     setTimeout(() => {
       this.myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setTimeout(() => {
+        this.state.showIntro = false;
+        this.forceUpdate();
+      }, 1000);
     }, 3000);
-
   }
 }
 

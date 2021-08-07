@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import React from "react";
@@ -50,6 +50,7 @@ const styles = muiBaseTheme => ({
 });
 
 function CardPannelLeft({ classes }) {
+
   return (
       <Card className={classes.card}>
         <CardMedia
@@ -138,12 +139,13 @@ const CardMiddle = withStyles(styles)(CardPannelMiddle);
 const CardRight = withStyles(styles)(CardPannelRight);
 
 export default function CardsGrow() {
-  const classes = useStyles();
 
+  const classes = useStyles();
+  
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <Grow appear={true} in={true}>
+        <Grow appear={true} in={true} >
           <Paper elevation={4} className={classes.paper}>
             <CardLeft/>
           </Paper>
