@@ -70,7 +70,7 @@ class Routing extends React.Component {
         this.state.showIntro = false;
         this.forceUpdate();
       }, 1000);
-    }, 3000);
+    }, 10000);
   }
 }
 
