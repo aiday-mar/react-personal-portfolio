@@ -79,6 +79,13 @@
 .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  
+  text-align : center;
+  display :flex;
+  align-items :center;
+  justify-content : center;
+  margin-top : 50px;
+  font-size : 100px;
 }
 
  @-webkit-keyframes tracking-in-expand {
@@ -105,4 +112,8 @@
   100% {
     opacity: 1;
   }
+}
+
+.animation {
+  height:100vh;
 }

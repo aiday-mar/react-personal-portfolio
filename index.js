@@ -20,6 +20,7 @@ class Routing extends React.Component {
     this.state = {
       animate : true,
     }
+    this.myRef = React.createRef() 
   }
 
   render() {
@@ -29,10 +30,10 @@ class Routing extends React.Component {
       <div className="Body">
         <div className="animation">
           <div className="tracking-in-expand">
-            Portfolio TO CHANGE
+            Portfolio
           </div>
         </div>
-        <Router>
+        <Router ref={this.myRef}>
           <div>
             <NavBar/>
             <Switch>
@@ -56,6 +57,13 @@ class Routing extends React.Component {
       this.setState({
         animate : true,
       })
+    }
+
+    // scroll to
+    if(this.state.animate == true) {
+      setTimeout(function() {
+        window.scrollTo(0, this.myRef.current.offsetTop);
+      }, 1000);
     }
   }
 }
