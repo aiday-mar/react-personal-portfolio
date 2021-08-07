@@ -9,6 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import AOS from 'aos';
+import Box from '@material-ui/core/Box';
 
 // Grow - Material UI
 const useStyles = makeStyles((theme) => ({
@@ -16,10 +17,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 30,
     display: 'flex',
     alignItems: 'center',
+    align: 'center',
     justify: 'center',
   },
   paper: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
   },
 }));
 
@@ -29,9 +31,9 @@ const styles = muiBaseTheme => ({
     maxWidth: 300,
     margin: "auto",
     transition: "0.3s",
-    boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+    boxShadow: "0 10px 40px -12px rgba(0,0,0,0.7)",
     "&:hover": {
-      boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)"
+      boxShadow: "0 20px 80px -12.125px rgba(0,0,0,0.7)"
     },
   },
   media: {
@@ -143,24 +145,22 @@ export default function CardsGrow() {
   const classes = useStyles();
   
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.container}>
-        <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
-          <Paper elevation={4} className={classes.paper}>
-            <CardLeft/>
-          </Paper>
-        </div>
-        <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
-          <Paper elevation={4} className={classes.paper}>
-            <CardMiddle/>
-          </Paper>
-        </div>
-        <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
-          <Paper elevation={4} className={classes.paper}>
-            <CardRight/>
-          </Paper>
-        </div>
+    <Box display="flex" justifyContent="center">
+      <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
+        <Paper elevation={4} className={classes.paper}>
+          <CardLeft/>
+        </Paper>
       </div>
-    </div>
+      <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
+        <Paper elevation={4} className={classes.paper}>
+          <CardMiddle/>
+        </Paper>
+      </div>
+      <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
+        <Paper elevation={4} className={classes.paper}>
+          <CardRight/>
+        </Paper>
+      </div>
+    </Box>
   );
 }
