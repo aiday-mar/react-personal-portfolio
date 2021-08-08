@@ -1,22 +1,32 @@
 import React from 'react';
-import firebase from "firebase";
+import {firestore} from "./../../firebaseConfig.js";
+import React,{useState,useEffect} from 'react';
 
 export default function Posts() {
 
-  const [documents, setDocuments] = React.useState([]);
-  const db = firebase.firestore();
-  React.useEffect(() => {
-    db.collection("Posts")
-      .get()
-      .then((querySnapshot) => {
-        let arr = [];
-        querySnapshot.docs.map((doc) =>
-          arr.push({ id: doc.id, value: doc.data() })
-        );
-        setDocuments(arr);
-      });
-  }, [db]);
-  
-  return(<div> {documents.value.title} </div>);
-  //return("hi");
+  const [blogs,setBlogs]=useState([])
+  const fetchBlogs=async()=>{
+    const response=db.collection('Posts');
+    const data=await response.get();
+    data.docs.forEach(item=>{
+     setBlogs([...blogs,item.data()])
+    })
+  }
+  useEffect(() => {
+    fetchBlogs();
+  }, [])
+  return (
+    <div>
+      {
+        blogs && blogs.map(blog=>{
+          return(
+            <div>
+              <h4>{blog.title}</h4>
+              <p>{blog.body}</p>
+            </div>
+          )
+        })
+      }
+    </div>
+  );
 }

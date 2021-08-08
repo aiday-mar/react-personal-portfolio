@@ -15,11 +15,6 @@ import "./style.css"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import firebaseConfig from './firebase.config.js';
-import firebase from "firebase";
-
-firebase.initializeApp(firebaseConfig);
-
 class Routing extends React.Component {
   
   constructor() {
