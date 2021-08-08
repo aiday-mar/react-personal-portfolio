@@ -64,13 +64,16 @@ class Routing extends React.Component {
       })
     }
     
-    setTimeout(() => {
-      this.myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    if(this.state.animate == true) {
+
       setTimeout(() => {
-        this.state.showIntro = false;
-        this.forceUpdate();
-      }, 1000);
-    }, 10000);
+        this.myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        setTimeout(() => {
+          this.state.showIntro = false;
+          this.forceUpdate();
+        }, 1000);
+      }, 8000);
+    }
   }
 }
 

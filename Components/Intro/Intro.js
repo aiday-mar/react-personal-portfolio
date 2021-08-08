@@ -16,7 +16,6 @@ export default class Intro extends React.Component {
         <div className="block-reveal-first" >Software Development</div>
         <div className="block-reveal-second" >Data Analysis</div>
       </div>
-
     </div>
     )
   }

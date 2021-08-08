@@ -4,6 +4,6 @@ import React from 'react';
 export default function Posts() {
 
   return(
-    <h2> hello posts! </h2>
+    <a> Example link to post </a>
   );
 }

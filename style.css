@@ -121,6 +121,7 @@
   background: linear-gradient(-45deg, #edf6f7,#f7f0f7, #ffffff);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
+
 }
 
 /* removing scrollbar */
@@ -144,10 +145,12 @@ html {
 
 /* block-$ */
 .block-effect {
-  font-size: 40px;
+  margin-top : 20px;
+  font-size: 30px;
   text-align : center;
   --td: 3s;
   font:"Times";
+  color : #525252;
 }
 
 .block-reveal-first {

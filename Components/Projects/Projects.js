@@ -5,6 +5,6 @@ import Search from './Search';
 export default function Projects () {
 
   return(
-    <Search/>
+    <p> Hi ! </p>
   );
 }
