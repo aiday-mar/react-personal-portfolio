@@ -1,23 +1,22 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
+import firebase from "firebase";
 
-import {
-  FirestoreCollection
-} from "@react-firebase/firestore";
-import firebaseConfig from './../../firebase.config.js';
-import { FirestoreProvider } from "@react-firebase/firestore";
-import firebase from "firebase/app";
-import "firebase/firestore";
-
-// export default class Posts extends React.Component
 export default function Posts() {
 
-  return(
-    <FirestoreProvider firebase={firebase} {...firebaseConfig}>
-      <FirestoreCollection path="/Posts/" limit={1}>
-        {post => {
-          return post.isLoading ? "Loading" : <pre>{post.title}</pre>;
-        }}
-      </FirestoreCollection>
-    </FirestoreProvider>
-  )
+  const [documents, setDocuments] = React.useState([]);
+  const db = firebase.firestore();
+  React.useEffect(() => {
+    db.collection("Posts")
+      .get()
+      .then((querySnapshot) => {
+        let arr = [];
+        querySnapshot.docs.map((doc) =>
+          arr.push({ id: doc.id, value: doc.data() })
+        );
+        setDocuments(arr);
+      });
+  }, [db]);
+  
+  return(<div> {documents.value.title} </div>);
+  //return("hi");
 }

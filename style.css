@@ -119,9 +119,8 @@
 
   /* .. */
   background: linear-gradient(-45deg, #edf6f7,#f7f0f7, #ffffff);
-	background-size: 400% 400%;
+	background-size: 100% 100%;
 	animation: gradient 10s ease infinite;
-
 }
 
 /* removing scrollbar */
