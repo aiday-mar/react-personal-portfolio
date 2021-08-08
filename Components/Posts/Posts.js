@@ -1,34 +1,23 @@
 import React,{useState,useEffect} from 'react';
-import db from './../../firebase.config';
 
+import {
+  FirestoreCollection
+} from "@react-firebase/firestore";
+import firebaseConfig from './../../firebase.config.js';
+import { FirestoreProvider } from "@react-firebase/firestore";
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 // export default class Posts extends React.Component
 export default function Posts() {
 
-  const [blogs,setBlogs]=useState([])
-  const fetchBlogs=async()=>{
-    const response=db.collection('Posts');
-    const data=await response.get();
-    data.docs.forEach(item=>{
-     setBlogs([...blogs,item.data()])
-    })
-  }
-  useEffect(() => {
-    fetchBlogs();
-  }, [])
-
-  return (
-    <div>
-      {
-        blogs && blogs.map(blog=>{
-          return(
-            <div>
-              <h4>{blog.title}</h4>
-              <p>{blog.body}</p>
-            </div>
-          )
-        })
-      }
-    </div>
-  );
+  return(
+    <FirestoreProvider firebase={firebase} {...firebaseConfig}>
+      <FirestoreCollection path="/Posts/" limit={1}>
+        {post => {
+          return post.isLoading ? "Loading" : <pre>{post.title}</pre>;
+        }}
+      </FirestoreCollection>
+    </FirestoreProvider>
+  )
 }

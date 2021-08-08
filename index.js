@@ -15,6 +15,10 @@ import "./style.css"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import firebaseConfig from './firebase.config.js';
+import { FirestoreProvider } from "@react-firebase/firestore";
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 class Routing extends React.Component {
   
@@ -31,22 +35,22 @@ class Routing extends React.Component {
     return(
       // if animate is TRUE we return component which shows animation and then goes to main page, otherwise just show
       // the main page
-      <div className="Body">
-        { this.state.animate && this.state.showIntro ? <Intro /> : null }
-        <div ref={this.myRef}>
-          <div style={{fontSize:30, textAlign: "center"}}> Portfolio </div>
-          <Router>
-            <div>
-              <NavBar/>
-              <Switch>
-                <Route path="/projects" component={Projects} />
-                <Route path="/posts" component={Posts} />
-                <Route exact path="/" component={Main} />
-              </Switch>
-            </div>
-          </Router>
+        <div className="Body">
+          { this.state.animate && this.state.showIntro ? <Intro /> : null }
+          <div ref={this.myRef}>
+            <div style={{fontSize:30, textAlign: "center"}}> Portfolio </div>
+            <Router>
+              <div>
+                <NavBar/>
+                <Switch>
+                  <Route path="/projects" component={Projects} />
+                  <Route path="/posts" component={Posts} />
+                  <Route exact path="/" component={Main} />
+                </Switch>
+              </div>
+            </Router>
+          </div>
         </div>
-      </div>
     )
   }
 
