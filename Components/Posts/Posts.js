@@ -1,32 +1,18 @@
 import React from 'react';
-import {firestore} from "./../../firebaseConfig.js";
+import {firestore, storage} from "./../../firebaseConfig.js";
 import React,{useState,useEffect} from 'react';
 
 export default function Posts() {
 
-  const [blogs,setBlogs]=useState([])
-  const fetchBlogs=async()=>{
-    const response=db.collection('Posts');
-    const data=await response.get();
-    data.docs.forEach(item=>{
-     setBlogs([...blogs,item.data()])
-    })
-  }
-  useEffect(() => {
-    fetchBlogs();
-  }, [])
-  return (
-    <div>
-      {
-        blogs && blogs.map(blog=>{
-          return(
-            <div>
-              <h4>{blog.title}</h4>
-              <p>{blog.body}</p>
-            </div>
-          )
-        })
-      }
-    </div>
-  );
+  var docRef = firestore.collection("Posts").doc("6Ep4X2Gpv2ZxcFYrXc2R");
+
+  var getOptions = {
+      source: 'cache'
+  };
+
+  docRef.get(getOptions).then((doc) => {
+      console.log("Cached document data:", doc.data());
+  }).catch((error) => {
+      console.log("Error getting cached document:", error);
+  });
 }
