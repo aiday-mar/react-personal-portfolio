@@ -1,7 +1,6 @@
 import React from 'react';
 import {firestore, storage} from "./../../firebaseConfig.js";
 import React,{useState,useEffect} from 'react';
-import firebase from "firebase/app";
 import "firebase/firestore";
 
 export default function Posts() {
@@ -16,7 +15,7 @@ export default function Posts() {
        const jsonId = {id : item.id}
        const modifiedBlog = {...jsonId, ...item.data()}
        posts.push(modifiedBlog)
-       
+
        // console.log("Document id:", modifiedBlog.id)
        // console.log("Document title:", modifiedBlog.title)
        // console.log("Document body:", modifiedBlog.body)
@@ -29,15 +28,17 @@ export default function Posts() {
     }, [])
 
     return (
-      <div>
+      <div class="outer-posts">
       {
       React.Children.toArray(
         blogs.map(blog=>{
           return(
             <div key={blog.id}>
-              <h4>{blog.id}</h4>
-              <h4>{blog.title}</h4>
-              <p>{blog.body}</p>
+              <div class="container-article">
+                <div class="hover-container">
+                  <p class="link-post">{blog.title}</p>
+                </div>
+              </div>
             </div>
           )
         }))
