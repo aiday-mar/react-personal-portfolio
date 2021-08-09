@@ -39,7 +39,7 @@ export default function Posts() {
                     <Link to={{pathname: "/post", 
                     state: {postId : blog.id, postTitle : blog.title, postContent : blog.body}}} 
                     style={{ textDecoration: 'none' }}>
-                      <img src={'./../../Images/${postId}/icon.png'} />
+                      <img src={'./../../Images/scala-icon.png'} />
                       <div class="link-post">
                         {blog.title}
                       </div>
