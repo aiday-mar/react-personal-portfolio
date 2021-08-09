@@ -6,7 +6,6 @@ import {
 import {firestore, storage} from "./../../firebaseConfig.js";
 import "firebase/firestore";
 
-
 export default function Posts() {
   
     const [blogs,setBlogs]=useState([])
@@ -39,7 +38,6 @@ export default function Posts() {
                     <Link to={{pathname: "/post", 
                     state: {postId : blog.id, postTitle : blog.title, postContent : blog.body}}} 
                     style={{ textDecoration: 'none' }}>
-                      <img src={'./../../Images/scala-icon.png'} />
                       <div class="link-post">
                         {blog.title}
                       </div>
