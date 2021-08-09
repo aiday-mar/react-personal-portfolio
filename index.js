@@ -5,7 +5,7 @@ import Posts from './Components/Posts/Posts';
 import Post from './Components/Posts/Post';
 import Projects from './Components/Projects/Projects';
 import Intro from './Components/Intro/Intro';
-import Contact from './Components/Contact/Contact';
+import About from './Components/About/About';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import NavBar from './navBar.js';
@@ -52,7 +52,7 @@ class Routing extends React.Component {
                 <Route path="/posts" component={Posts} />
                 <Route exact path="/" component={Main} />
                 <Route exact path="/post" component={Post} />
-                <Route exact path="/contact" component={Contact} />
+                <Route exact path="/about" component={About} />
               </Switch>
             </div>
           </Router>

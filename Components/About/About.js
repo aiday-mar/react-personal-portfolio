@@ -1,11 +1,13 @@
 import React from 'react';
 import "./../../style.css"
 
-export default class Contact extends React.Component {
+export default class About extends React.Component {
   
   render() {
     return(
-    Hi
+      <div>
+        Hi
+      </div>
     );
   }
 }

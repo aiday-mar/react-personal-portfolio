@@ -19,7 +19,7 @@ const NavBar = () => {
             <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none'}} to="/projects">Projects</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', marginRight : 40}} to="/contact">Contact</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', marginRight : 40}} to="/about">About</NavLink>
           </li>
         </ul>
       </div>
