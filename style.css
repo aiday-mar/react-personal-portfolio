@@ -2,9 +2,12 @@
   font-family: sans-serif;
   text-align: center;
 }
+
 .NavBar {
   border-bottom: 1px groove rgb(221, 221, 221);
+  background-color: #1f2833;
 }
+
 #navigation-ul {
   list-style-type: none;
   margin: 0;

@@ -7,7 +7,7 @@ export default function Post(){
   const { postId, postTitle, postContent } = location.state
   return (
     <div>
-      <h2>{postTitle}</h2>,
+      <div style={{textAlign: "center", marginTop:20, fontSize : 30, color: "#787a7d"}}>{postTitle}</div>,
       <div dangerouslySetInnerHTML={ { __html: postContent } }></div>
     </div>
   );
