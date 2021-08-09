@@ -280,20 +280,20 @@ body {
 .container-article {
   display: flex;
   flex-flow: column;
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  /* justify-content: center; */
 }
 
 .hover-container {
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 1em;
 }
 
 .link-post {
   border-bottom: 2px solid #a8e3f1;
-  font-size: 20px;
+  font-size: 18px;
   transition: all 0.25s linear;
   position: relative;
   cursor: pointer;
@@ -310,7 +310,7 @@ body {
   bottom: -2px; /* this is to match where the border is */
   transform-origin: left; 
   transform: scale(0);
-  transition: 0.25s linear;
+  transition: 0.5s linear;
 /*   will-change: transform; */
 }
 
