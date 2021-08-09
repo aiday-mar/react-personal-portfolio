@@ -36,7 +36,9 @@ export default function Posts() {
             <div key={blog.id}>
               <div class="container-article">
                 <div class="hover-container">
-                    <Link to={{pathname: "/post", state: {postId : blog.id}}} style={{ textDecoration: 'none' }}>
+                    <Link to={{pathname: "/post", 
+                    state: {postId : blog.id, postTitle : blog.title, postContent : blog.body}}} 
+                    style={{ textDecoration: 'none' }}>
                       <div class="link-post">
                         {blog.title}
                       </div>

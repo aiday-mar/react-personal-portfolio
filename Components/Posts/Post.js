@@ -4,9 +4,11 @@ import {useState,useEffect} from 'react';
 
 export default function Post(){
   let location = useLocation();
-  const { postId } = location.state
+  const { postId, postTitle, postContent } = location.state
   return (
-  <h1>Hi!</h1>,
-  <h2>{postId}</h2>
+    <div>
+      <h2>{postTitle}</h2>,
+      <div dangerouslySetInnerHTML={ { __html: postContent } }></div>
+    </div>
   );
 }
