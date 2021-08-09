@@ -38,7 +38,7 @@ class Routing extends React.Component {
               justifyContent: 'center'
             }}
           >
-            <div style={{ backgroundColor: '#ffffff', marginRight : 10, borderRadius: 5, color : "#1f2833", padding : 5, fontSize : 27}}>
+            <div style={{ backgroundColor: '#ffffff', marginRight : 10, borderRadius: 5, color : "#1f2833", padding : 5, fontSize : 22}}>
               &#60;Coding&#47;&#62;
             </div>
             Portfolio
