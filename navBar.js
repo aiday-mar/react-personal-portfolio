@@ -2,8 +2,6 @@ import React from "react";
 import {
   NavLink,
   BrowserRouter as Router,
-  Switch,
-  Route,
 } from "react-router-dom";
 
 const NavBar = () => {

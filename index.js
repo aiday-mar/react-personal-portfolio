@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Main from './Components/Main/Main';
 import Posts from './Components/Posts/Posts';
+import Post from './Components/Posts/Post'
 import Projects from './Components/Projects/Projects';
 import Intro from './Components/Intro/Intro';
 import {
@@ -39,6 +40,7 @@ class Routing extends React.Component {
                   <Route path="/projects" component={Projects} />
                   <Route path="/posts" component={Posts} />
                   <Route exact path="/" component={Main} />
+                  <Route exact path="/post" component={Post} />
                 </Switch>
               </div>
             </Router>

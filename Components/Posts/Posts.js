@@ -1,11 +1,11 @@
 import React from 'react';
-import {firestore, storage} from "./../../firebaseConfig.js";
-import React,{useState,useEffect} from 'react';
-import "firebase/firestore";
+import {useState,useEffect} from 'react';
 import {
-  NavLink,
-  BrowserRouter as Router,
+  Link,
 } from "react-router-dom";
+import {firestore, storage} from "./../../firebaseConfig.js";
+import "firebase/firestore";
+
 
 export default function Posts() {
   
@@ -36,11 +36,11 @@ export default function Posts() {
             <div key={blog.id}>
               <div class="container-article">
                 <div class="hover-container">
-                  <NavLink to={`${blog.id}`} style={{ textDecoration: 'none' }}>
-                    <div className="link-post">
-                      {blog.title}
-                    </div>
-                  </NavLink>
+                    <Link to={{pathname: "/post", state: {postId : blog.id}}} style={{ textDecoration: 'none' }}>
+                      <div class="link-post">
+                        {blog.title}
+                      </div>
+                    </Link>
                 </div>
               </div>
             </div>
