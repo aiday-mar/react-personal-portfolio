@@ -39,6 +39,7 @@ export default function Posts() {
                     <Link to={{pathname: "/post", 
                     state: {postId : blog.id, postTitle : blog.title, postContent : blog.body}}} 
                     style={{ textDecoration: 'none' }}>
+                      <img src={'./../../Images/${postId}/icon.jpg'} />
                       <div class="link-post">
                         {blog.title}
                       </div>
