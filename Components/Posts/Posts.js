@@ -2,6 +2,10 @@ import React from 'react';
 import {firestore, storage} from "./../../firebaseConfig.js";
 import React,{useState,useEffect} from 'react';
 import "firebase/firestore";
+import {
+  NavLink,
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 export default function Posts() {
   
@@ -15,10 +19,6 @@ export default function Posts() {
        const jsonId = {id : item.id}
        const modifiedBlog = {...jsonId, ...item.data()}
        posts.push(modifiedBlog)
-
-       // console.log("Document id:", modifiedBlog.id)
-       // console.log("Document title:", modifiedBlog.title)
-       // console.log("Document body:", modifiedBlog.body)
       })
       setBlogs(posts)
     }
@@ -36,7 +36,11 @@ export default function Posts() {
             <div key={blog.id}>
               <div class="container-article">
                 <div class="hover-container">
-                  <p class="link-post">{blog.title}</p>
+                  <NavLink to={`${blog.id}`} style={{ textDecoration: 'none' }}>
+                    <div className="link-post">
+                      {blog.title}
+                    </div>
+                  </NavLink>
                 </div>
               </div>
             </div>
