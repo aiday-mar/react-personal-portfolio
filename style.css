@@ -10,15 +10,16 @@
 
 .navbarLink {
   display: block;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   position: relative;
+  font-size : 18px;
 }
 
 
 .navbarLink::after{
   content: "";
-  background: white;
+  background: #ffffff;
 	mix-blend-mode: exclusion;
   width: calc(100% + 20px);
   height: 0;
