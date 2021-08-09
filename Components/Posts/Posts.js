@@ -11,19 +11,25 @@ export default function Posts() {
       const response=firestore.collection('Posts');
       const data=await response.get();
       data.docs.forEach(item=>{
-       setBlogs([...blogs,item.data()])
+       const jsonId = {id : item.id}
+       const modifiedBlog = {...jsonId, ...item.data()}
+       setBlogs([...blogs, modifiedBlog])
+       console.log("Document id:", modifiedBlog.id)
+       console.log("Document title:", modifiedBlog.title)
+       console.log("Document body:", modifiedBlog.body)
       })
     }
     useEffect(() => {
       fetchBlogs();
     }, [])
-    
+
     return (
       <div>
         {
           blogs && blogs.map(blog=>{
             return(
-              <div>
+              <div key={blog.id}>
+                <h4>{blog.id}</h4>
                 <h4>{blog.title}</h4>
                 <p>{blog.body}</p>
               </div>
