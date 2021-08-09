@@ -26,7 +26,7 @@ export default function Posts() {
     return (
       <div>
         {
-          blogs && blogs.map(blog=>{
+          blogs.map(blog=>{
             return(
               <div key={blog.id}>
                 <h4>{blog.id}</h4>
