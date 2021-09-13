@@ -3,34 +3,39 @@ import {useState,useEffect} from 'react';
 import {
   Link,
 } from "react-router-dom";
-import {firestore, storage} from "./../../firebaseConfig.js";
-import "firebase/firestore";
 
 export default function Posts() {
   
-    const [blogs,setBlogs]=useState([])
+    const [data,setData]=useState([]);
 
-    const fetchBlogs=async()=>{
-      const posts = []
-      const response=firestore.collection('Posts');
-      const data=await response.get();
-      data.docs.forEach(item=>{
-       const jsonId = {id : item.id}
-       const modifiedBlog = {...jsonId, ...item.data()}
-       posts.push(modifiedBlog)
-      })
-      setBlogs(posts)
+    const getData=()=>{
+      fetch('postsJSON.json'
+      ,{
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      }
+      )
+        .then(function(response){
+          console.log(response)
+          return response.json();
+        })
+        .then(function(myJson) {
+          console.log(myJson);
+          setData(myJson)
+        });
     }
 
-    useEffect(() => {
-      fetchBlogs();
-    }, [])
+    useEffect(()=>{
+      getData()
+    },[])
 
     return (
       <div class="outer-posts">
       {
       React.Children.toArray(
-        blogs.map(blog=>{
+        data.map(blog=>{
           return(
             <div key={blog.id}>
               <div class="container-article">
