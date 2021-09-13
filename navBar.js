@@ -10,16 +10,16 @@ const NavBar = () => {
       <div className="NavBar">
         <ul id="navigation-ul">
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', marginLeft : 40}} to="/">Home</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', marginLeft : 40, padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/">Home</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none'}} to="/posts">Posts</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/posts">Posts</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none'}} to="/projects">Projects</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/projects">Projects</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', marginRight : 40}} to="/about">About</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#eee2dc' }} style={{ color: '#eee2dc', textDecoration: 'none', marginRight : 40, padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/about">About</NavLink>
           </li>
         </ul>
       </div>

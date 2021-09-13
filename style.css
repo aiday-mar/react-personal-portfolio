@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.body {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png");
+  background-repeat: repeat;
+}
 .NavBar {
   border-bottom: 1px groove rgb(221, 221, 221);
   background-color: #1f2833;
