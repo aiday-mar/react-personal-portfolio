@@ -8,6 +8,7 @@ export default function Posts() {
   
     const [data,setData]=useState([]);
 
+    
     const getData=()=>{
       fetch('postsJSON.json'
       ,{
