@@ -1,5 +1,5 @@
-[
-  {
+export const postsJSON = {
+  "results" : [{
     "id" : 1,
     "title" : "Using Spark to build a recommendation engine",
     "date" : "13/09/2021",
@@ -19,5 +19,5 @@
     "date" : "13/09/2021",
     "body" : "Talk about the project for EPFL",
     "icon" : "https://www.logiciels.pro/wp-content/uploads/2021/05/keras-avis-prix-alternatives-logiciel.webp"
-  }
-]
+  }]
+}
