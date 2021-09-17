@@ -3,9 +3,7 @@ import {useState,useEffect} from 'react';
 import {
   Link,
 } from "react-router-dom";
-import postsJSON from "./postsJSON.js";
 
-/*
 const posts = {
   "results" : [{
     "id" : 1,
@@ -29,15 +27,8 @@ const posts = {
     "icon" : "https://www.logiciels.pro/wp-content/uploads/2021/05/keras-avis-prix-alternatives-logiciel.webp"
   }]
 }
-*/
 
 export default function Posts() {
-
-  const [posts, setPosts]= useState();
-  
-  useEffect(()=>{
-    setPosts(postsJSON);
-  },[])
 
   return (
     <div class="outer-posts">
