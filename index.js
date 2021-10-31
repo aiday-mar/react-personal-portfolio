@@ -32,7 +32,7 @@ class Routing extends React.Component {
             style={{
               fontSize: 30,
               backgroundColor: '#1f2833',
-              color: '#eee2dc',
+              color: '#ffffff',
               paddingTop: 20,
               paddingBottom: 10,
               display: 'flex',
@@ -68,6 +68,7 @@ class Routing extends React.Component {
         animate: true
       });
       window.sessionStorage.setItem('firstLoadDone', 1);
+      document.body.style.overflow = 'hidden';
     } else {
       this.setState({
         animate: false
@@ -81,6 +82,7 @@ class Routing extends React.Component {
           block: 'start'
         });
         setTimeout(() => {
+          document.body.style.overflow = 'unset';
           this.state.showIntro = false;
           this.forceUpdate();
         }, 1000);
