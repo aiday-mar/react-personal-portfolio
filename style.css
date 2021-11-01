@@ -24,7 +24,7 @@
 .navbarLink::after{
   content: "";
   background: #a8e3f1;
-  color: #1f2833;
+  color: black;
   width: calc(100% + 20px);
   height: 0;
   position: absolute;
