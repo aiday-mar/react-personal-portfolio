@@ -31,7 +31,7 @@ class Routing extends React.Component {
         <div ref={this.myRef}>
           <Router>
             <div>
-              <NavBar />
+              {this.state.showIntro ? <NavBar /> : <NavBar style={{top: '0',position: 'sticky'}} />}
               <Switch>
                 <Route path="/projects" component={Projects} />
                 <Route path="/posts" component={Posts} />

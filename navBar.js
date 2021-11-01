@@ -16,8 +16,6 @@ const NavBar = () => {
         paddingBottom: 10,
         display: 'flex',
         justifyContent: 'center',
-        top: '0',
-        position: 'sticky',
       }}>
         <div style={{ backgroundColor: '#ffffff', marginRight : 10, borderRadius: 5, color : "#1f2833", padding : 5, fontSize : 22, fontFamily : "consolas"}}>
           &#60;Coding&#47;&#62;
