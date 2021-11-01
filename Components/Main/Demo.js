@@ -10,6 +10,9 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import AOS from 'aos';
 import Box from '@material-ui/core/Box';
+import {
+  Link,
+} from "react-router-dom";
 
 // Grow - Material UI
 const useStyles = makeStyles((theme) => ({
@@ -156,14 +159,14 @@ function CardPannelMiddle2({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpz1I9PCKViIdlhL-IFYVVYySb9ZNcqA4ZbQ&usqp=CAU"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTJCmjSWu0wfjp_oI87HUs1jM1d68L0Sv0XrAhBAwgm3xkqyq0qzKngLP394a3AjD5Bw&usqp=CAU"
           } />
         <CardContent className={classes.content}>
           <Typography
             className={"MuiTypography--heading"}
             variant={"h6"}
             gutterBottom >
-            Scala  
+            Spark  
           </Typography>
           <Typography
             className={"MuiTypography--subheading"}
@@ -299,55 +302,73 @@ export default function CardsGrow() {
   return (
     <Box>
       <Box display="flex" justifyContent="center" mt="50px">
-        <div> 
-          <Paper elevation={4} className={classes.paper}>
-            <CardLeft/>
-          </Paper>
-        </div>
-        <div>
-          <Paper elevation={4} className={classes.paper}>
-            <CardMiddle/>
-          </Paper>
-        </div>
-        <div>
-          <Paper elevation={4} className={classes.paper}>
-            <CardRight/>
-          </Paper>
-        </div>
+        <Link to={{pathname: "/project", state: {postTitle : "Angular, Three.js", postContent : "<p> Angular based website </p>"}}}>
+          <div> 
+            <Paper elevation={4} className={classes.paper}>
+              <CardLeft/>
+            </Paper>
+          </div>
+        </Link>
+        <Link to={{pathname: "/project", state: {postTitle : "React, Websocket.io, Node.js, GraphQL", postContent : "<p> Describe the website </p>"}}}>
+          <div>
+            <Paper elevation={4} className={classes.paper}>
+              <CardMiddle/>
+            </Paper>
+          </div>
+        </Link>
+        <Link to={{pathname: "/project", state: {postTitle : "React portfolio", postContent : "<p> Describe the portfolio</p>"}}}>
+          <div>
+            <Paper elevation={4} className={classes.paper}>
+              <CardRight/>
+            </Paper>
+          </div>
+        </Link>
       </Box>
       <Box display="flex" justifyContent="center" mt="50px">
-      <div> 
-        <Paper elevation={4} className={classes.paper}>
-          <CardLeft2/>
-        </Paper>
-      </div>
-      <div>
-        <Paper elevation={4} className={classes.paper}>
-          <CardMiddle2/>
-        </Paper>
-      </div>
-      <div>
-        <Paper elevation={4} className={classes.paper}>
-          <CardRight2/>
-        </Paper>
-      </div>
+      <Link to={{pathname: "/project", state: {postTitle : "Android Application", postContent : "<p> Describe the android application </p>"}}}>
+        <div> 
+          <Paper elevation={4} className={classes.paper}>
+            <CardLeft2/>
+          </Paper>
+        </div>
+      </Link>
+      <Link to={{pathname: "/project", state: {postTitle : "Spark", postContent : "<p> Describe spark</p>"}}}>
+        <div>
+          <Paper elevation={4} className={classes.paper}>
+            <CardMiddle2/>
+          </Paper>
+        </div>
+      </Link>
+      <Link to={{pathname: "/project", state: {postTitle : "Keras, Python", postContent : "<p> Describe the uni project</p>"}}}>
+        <div>
+          <Paper elevation={4} className={classes.paper}>
+            <CardRight2/>
+          </Paper>
+        </div>
+      </Link>
     </Box>
     <Box display="flex" justifyContent="center" mt="50px">
-      <div> 
-        <Paper elevation={4} className={classes.paper}>
-          <CardLeft3/>
-        </Paper>
-      </div>
-      <div>
-        <Paper elevation={4} className={classes.paper}>
-          <CardMiddle3/>
-        </Paper>
-      </div>
-      <div>
-        <Paper elevation={4} className={classes.paper}>
-          <CardRight3/>
-        </Paper>
-      </div>
+      <Link to={{pathname: "/project", state: {postTitle : "ASP .NET", postContent : "<p> Describe the asp .net website</p>"}}}>
+        <div> 
+          <Paper elevation={4} className={classes.paper}>
+            <CardLeft3/>
+          </Paper>
+        </div>
+      </Link>
+      <Link to={{pathname: "/project", state: {postTitle : "C++ algorithms", postContent : "<p> Describe how eigenvalues were found</p>"}}}>
+        <div>
+          <Paper elevation={4} className={classes.paper}>
+            <CardMiddle3/>
+          </Paper>
+        </div>
+      </Link>
+      <Link to={{pathname: "/project", state: {postTitle : "MPI/CUDA", postContent : "<p> Describe the optimization</p>"}}}>
+        <div>
+          <Paper elevation={4} className={classes.paper}>
+            <CardRight3/>
+          </Paper>
+        </div>
+      </Link>
     </Box>
   </Box>
   );
