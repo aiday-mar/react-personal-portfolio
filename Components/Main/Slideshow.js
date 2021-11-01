@@ -16,28 +16,6 @@ export default function Slideshow() {
     }
   }
 
-  // after dom created we return from the first slide 
-  /*
-  const delay = 10000;
-
-  React.useEffect(() => {
-    resetTimeout();
-    // access the current value of the timeout 
-    // supposing we have 3 colors and hence we have prevIndex now 2,
-    // then we need to move to the zero index, otherwise to the next index
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-    return () => {
-      resetTimeout();
-    };
-  }, [index]);
-  */
-
   return (
     <div className="slideshow">
       <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>

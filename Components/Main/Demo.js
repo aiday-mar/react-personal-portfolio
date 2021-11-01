@@ -60,13 +60,12 @@ function CardPannelLeft({ classes }) {
             variant={"h6"}
             gutterBottom
           >
-            Card 1 
+            Angular, Three.js
           </Typography>
           <Typography
             className={"MuiTypography--subheading"}
-            variant={"caption"}
-          >
-            Project number one is done. Add the text corresponding to this card.
+            variant={"caption"}>
+            I have developed a travelling website using Angular, which integrates shopping functionality and 3D animations
           </Typography>
         </CardContent>
       </Card>
@@ -88,13 +87,12 @@ function CardPannelMiddle({ classes }) {
             variant={"h6"}
             gutterBottom
           >
-            Card 2 
+            React, Websocket.io, Node.JS, GraphQL
           </Typography>
           <Typography
             className={"MuiTypography--subheading"}
-            variant={"caption"}
-          >
-            Project number second is done. Add the text corresponding to this card.
+            variant={"caption"}>
+            This is a studying application based on React, Websocket and GraphQL, wherein you can chat and take notes
           </Typography>
         </CardContent>
       </Card>
@@ -108,21 +106,174 @@ function CardPannelRight({ classes }) {
           className={classes.media}
           image={
             "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
-          }
-        />
+          } />
         <CardContent className={classes.content}>
           <Typography
             className={"MuiTypography--heading"}
             variant={"h6"}
-            gutterBottom
-          >
-            Card 3
+            gutterBottom >
+            React Portfolio
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"}>
+            This website was built using React. Here are the details.
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+
+
+function CardPannelLeft2({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          } />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom >
+            Android Application
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"}>
+            Social platform android application built using Java  
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+
+function CardPannelMiddle2({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          } />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom >
+            Scala  
           </Typography>
           <Typography
             className={"MuiTypography--subheading"}
             variant={"caption"}
           >
-            Project number third is done. Add the text corresponding to this card.
+            Scala-based program which recommends movies. It uses the 100k-len dataset. 
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+
+
+function CardPannelRight2({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          } />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom >
+            Keras, Python  
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"} >
+            Using Keras to train neural networks in order to classify images with numbers 
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+
+function CardPannelLeft3({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          } />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom >
+            ASP .NET 
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"}
+          >
+            Making a simple website using the .NET framework 
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+
+function CardPannelMiddle3({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          } />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom >
+            C++ Algorithms
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"}
+          >
+            Building C++ algorithms to compute the eigenvalues of a matrix 
+          </Typography>
+        </CardContent>
+      </Card>
+  );
+}
+
+function CardPannelRight3({ classes }) {
+  return (
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image={
+            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+          } />
+        <CardContent className={classes.content}>
+          <Typography
+            className={"MuiTypography--heading"}
+            variant={"h6"}
+            gutterBottom >
+            MPI/CUDA 
+          </Typography>
+          <Typography
+            className={"MuiTypography--subheading"}
+            variant={"caption"}
+          >
+            Using MPI and CUDA to optimize the execution of the Poisson algorithm
           </Typography>
         </CardContent>
       </Card>
@@ -130,30 +281,74 @@ function CardPannelRight({ classes }) {
 }
 
 const CardLeft = withStyles(styles)(CardPannelLeft);
+const CardLeft2 = withStyles(styles)(CardPannelLeft2);
+const CardLeft3 = withStyles(styles)(CardPannelLeft3);
 const CardMiddle = withStyles(styles)(CardPannelMiddle);
+const CardMiddle2 = withStyles(styles)(CardPannelMiddle2);
+const CardMiddle3 = withStyles(styles)(CardPannelMiddle3);
 const CardRight = withStyles(styles)(CardPannelRight);
+const CardRight2 = withStyles(styles)(CardPannelRight2);
+const CardRight3 = withStyles(styles)(CardPannelRight3);
+
 
 export default function CardsGrow() {
 
   const classes = useStyles();
   
+  // data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'
   return (
-    <Box display="flex" justifyContent="center" mt="50px">
-      <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
+    <Box>
+      <Box display="flex" justifyContent="center" mt="50px">
+        <div> 
+          <Paper elevation={4} className={classes.paper}>
+            <CardLeft/>
+          </Paper>
+        </div>
+        <div>
+          <Paper elevation={4} className={classes.paper}>
+            <CardMiddle/>
+          </Paper>
+        </div>
+        <div>
+          <Paper elevation={4} className={classes.paper}>
+            <CardRight/>
+          </Paper>
+        </div>
+      </Box>
+      <Box display="flex" justifyContent="center" mt="50px">
+      <div> 
         <Paper elevation={4} className={classes.paper}>
-          <CardLeft/>
+          <CardLeft2/>
         </Paper>
       </div>
-      <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
+      <div>
         <Paper elevation={4} className={classes.paper}>
-          <CardMiddle/>
+          <CardMiddle2/>
         </Paper>
       </div>
-      <div data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'>
+      <div>
         <Paper elevation={4} className={classes.paper}>
-          <CardRight/>
+          <CardRight2/>
         </Paper>
       </div>
     </Box>
+    <Box display="flex" justifyContent="center" mt="50px">
+      <div> 
+        <Paper elevation={4} className={classes.paper}>
+          <CardLeft3/>
+        </Paper>
+      </div>
+      <div>
+        <Paper elevation={4} className={classes.paper}>
+          <CardMiddle3/>
+        </Paper>
+      </div>
+      <div>
+        <Paper elevation={4} className={classes.paper}>
+          <CardRight3/>
+        </Paper>
+      </div>
+    </Box>
+  </Box>
   );
 }

@@ -62,7 +62,7 @@ class Routing extends React.Component {
   }
 
   componentDidMount() {
-    AOS.init();
+    //AOS.init();
     if (window.sessionStorage.getItem('firstLoadDone') === null) {
       this.setState({
         animate: true
@@ -86,7 +86,7 @@ class Routing extends React.Component {
           this.state.showIntro = false;
           this.forceUpdate();
         }, 1000);
-      }, 8000);
+      }, 6000);
     }
   }
 }
