@@ -51,7 +51,7 @@ function CardPannelLeft({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://miro.medium.com/max/724/1*QFD8QhUqbJhxT4LWahmsew.jpeg"
           }
         />
         <CardContent className={classes.content}>
@@ -78,7 +78,7 @@ function CardPannelMiddle({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://i.morioh.com/2019/11/15/2d0baf6e8708.jpg"
           }
         />
         <CardContent className={classes.content}>
@@ -105,7 +105,7 @@ function CardPannelRight({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
           } />
         <CardContent className={classes.content}>
           <Typography
@@ -131,7 +131,7 @@ function CardPannelLeft2({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://pic.clubic.com/v1/images/1193268/raw"
           } />
         <CardContent className={classes.content}>
           <Typography
@@ -156,7 +156,7 @@ function CardPannelMiddle2({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpz1I9PCKViIdlhL-IFYVVYySb9ZNcqA4ZbQ&usqp=CAU"
           } />
         <CardContent className={classes.content}>
           <Typography
@@ -183,7 +183,7 @@ function CardPannelRight2({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://s3.ap-south-1.amazonaws.com/techleerimages/0f1b1b40-08f0-467d-9a35-0f0fe71e0a43.png"
           } />
         <CardContent className={classes.content}>
           <Typography
@@ -208,7 +208,7 @@ function CardPannelLeft3({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://accu-web.co.uk/wp-content/uploads/2019/01/asp.net-border-526x335.png"
           } />
         <CardContent className={classes.content}>
           <Typography
@@ -234,7 +234,7 @@ function CardPannelMiddle3({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png"
           } />
         <CardContent className={classes.content}>
           <Typography
@@ -260,7 +260,7 @@ function CardPannelRight3({ classes }) {
         <CardMedia
           className={classes.media}
           image={
-            "https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
+            "https://jtes.net/wp-content/uploads/2015/05/NVIDIA_CUDA_V_2C_r.jpg"
           } />
         <CardContent className={classes.content}>
           <Typography
