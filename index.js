@@ -29,6 +29,22 @@ class Routing extends React.Component {
       <div className="Body">
         {this.state.animate && this.state.showIntro ? <Intro /> : null}
         <div ref={this.myRef}>
+          <div
+            style={{
+              fontSize: 30,
+              backgroundColor: '#1f2833',
+              color: '#ffffff',
+              paddingTop: 20,
+              paddingBottom: 10,
+              display: 'flex',
+              justifyContent: 'center'
+            }}
+          >
+            <div style={{ backgroundColor: '#ffffff', marginRight : 10, borderRadius: 5, color : "#1f2833", padding : 5, fontSize : 22, fontFamily : "consolas"}}>
+              &#60;Coding&#47;&#62;
+            </div>
+            Portfolio
+          </div>
           <Router>
             <div>
               <NavBar />

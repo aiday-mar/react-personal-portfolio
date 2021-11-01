@@ -17,8 +17,8 @@ export default function Slideshow() {
   }
 
   return (
-    <div className="slideshow" style={{paddingTop:'300'}}>
-      <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)`}}>
+    <div className="slideshow">
+      <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
         {colors.map((backgroundColor, index) => (
           <div className="slide" key={index}>
             <div className="textInSlide" style = {{fontSize : 17}}>
