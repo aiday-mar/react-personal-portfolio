@@ -6,7 +6,7 @@ import {
 
 const NavBar = () => {
   return (
-    <div style={{top: '0',position: 'sticky'}}>
+    <div style={{top: '0',position: 'sticky', zIndex: '1'}}>
       <div
       style={{
         fontSize: 30,
