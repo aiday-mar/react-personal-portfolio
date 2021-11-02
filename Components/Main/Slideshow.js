@@ -1,6 +1,6 @@
 import React from 'react';
 const colors = ["#ffffff", "#ffffff", "#ffffff"];
-const text = ["On this website you may find the work I have done in software engineering and data science previously. My field of work so far spans development of Android Java apps, React, Angular, Ruby and Django Web apps, as well as ASP .NET apps written in C#. In the field of data analysis I have worked with R and Python, as well as the ML.NET library part of the ASP .NET Core framework.", "I have obtained a masters in computational science at EPFL and am passionate about web design", "Aiday Marlen Kyzy"]
+const text = ["Welcome to my portfolio! On this website you may find the work I have previously done in software engineering and data science. You can find my projects below as well as under 'projects'. You may also find my posts about what I learned under 'posts'. Click on the next dot to see more.", "I have obtained a masters degree in computational science and a bachelors degree in mathematics from EPFL. I am passionate about web design, data science and logic.", "I like to draw and play volleyball. I spend a lot of time with family and friends :)."]
 // 5 seconds before the next slide is shown
 
 export default function Slideshow() {
