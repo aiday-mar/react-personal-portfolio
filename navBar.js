@@ -21,12 +21,11 @@ const NavBar = () => {
           &#60;Coding&#47;&#62;
         </div>
         Portfolio
-      </div>
 
-      <div style={{textAlign: 'right'}}>
-      <a href="#" className="fa fa-facebook" style={{fontSize: 30,padding: 20}}></a>
-      <a href="#" className="fa fa-twitter" style={{fontSize: 30,padding: 20}}></a>
-      <a href="#" className="fa fa-instagram" style={{fontSize: 30,padding: 20}}></a>
+        <div style={{textAlign: 'right', float: 'right', position:'absolute' ,right:40}}>
+        <a href="https://github.com/aiday-mar?tab=repositories" className="fa fa-github" style={{fontSize: 25,paddingLeft: 20, color: 'white', textDecoration:'none'}}></a>
+        <a href="https://www.linkedin.com/in/aiday-marlen-kyzy/" className="fa fa-linkedin" style={{fontSize: 25,paddingLeft: 20, color: 'white',  textDecoration:'none'}}></a>
+        </div>
       </div>
 
       <div className="NavBar">
