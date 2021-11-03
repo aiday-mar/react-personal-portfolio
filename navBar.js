@@ -23,6 +23,12 @@ const NavBar = () => {
         Portfolio
       </div>
 
+      <div style={{textAlign: 'right'}}>
+      <a href="#" className="fa fa-facebook" style={{fontSize: 30,padding: 20}}></a>
+      <a href="#" className="fa fa-twitter" style={{fontSize: 30,padding: 20}}></a>
+      <a href="#" className="fa fa-instagram" style={{fontSize: 30,padding: 20}}></a>
+      </div>
+
       <div className="NavBar">
         <ul id="navigation-ul">
           <li id="navigation-li">
