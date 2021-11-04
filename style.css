@@ -4,7 +4,7 @@
 }
 
 .body {
-  background-image: url("https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg");
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png");
   background-repeat: repeat;
 }
 .NavBar {
@@ -357,7 +357,7 @@ body {
 }
 
 .wave {
-  background: url('https://img.freepik.com/free-vector/abstract-connecting-dots-lines-with-geometric-background_41981-1508.jpg?size=626&ext=jpg') repeat-x;
+  background: url('https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg') repeat-x;
   position: absolute;
   top: -198px;
   width: 6400px;
