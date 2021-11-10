@@ -35,11 +35,11 @@ class Routing extends React.Component {
                 <NavBar style={{ top: '0', position: 'sticky' }} />
               )}
               <Switch>
-                <Route path="/projects" component={Projects} />
-                <Route path="/posts" component={Posts} />
-                <Route path="/post" component={Post} />
                 <Route exact path="/" component={Main} />
-                <Route exact path="/project" component={Project} />
+                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/posts" component={Posts} />
+                <Route path="/post" component={Post} />
+                <Route path="/project" component={Project} />
                 <Route exact path="/about" component={About} />
               </Switch>
             </div>
