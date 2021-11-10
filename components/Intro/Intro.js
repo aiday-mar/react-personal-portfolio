@@ -7,7 +7,6 @@ export default class Intro extends React.Component {
       <div className="animation">
         <div style={{ height: '40%' }}>
           <div className="tracking-in-expand">Portfolio</div>
-
           <br />
           <br />
           <div className="block-effect">

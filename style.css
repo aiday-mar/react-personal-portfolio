@@ -124,7 +124,7 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 100px;
+  font-size: 150px;
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -155,18 +155,16 @@ a:focus {
 
 .animation {
   height: 100vh;
-
-  /* .. */
-  background: linear-gradient(-45deg, #edf6f7, #f7f0f7, #ffffff);
+  background: linear-gradient(-45deg, #582dad, #23b7c4, #ffedfc);
   background-size: 100% 100%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 5s ease infinite;
 }
 
 .Body {
   height: 100vh;
 }
-/* removing scrollbar */
 
+/* removing scrollbar */
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -196,7 +194,7 @@ html {
   overflow: hidden;
 
   animation: revealBlock 0s var(--t) forwards;
-  --bc: #ffe6e6;
+  --bc: #726689;
   --d: 0.1s;
 }
 
@@ -210,7 +208,7 @@ html {
   overflow: hidden;
 
   animation: revealBlock 0s var(--t) forwards;
-  --bc: #e6ffff;
+  --bc: #65c3cb;
   --d: 0.5s;
 }
 
