@@ -37,7 +37,7 @@ a:visited, a:hover, a:focus {
   position: absolute;
   bottom: -4px;
   left: -10px;
-  transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: all 0.01s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .navbarLink:hover::after {
