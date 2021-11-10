@@ -21,7 +21,7 @@ export default function Slideshow() {
   }
 
   return (
-    <div className="slideshow" style={{fontFamily: 'Arial Narrow'}}>
+    <div className="slideshow" style={{ fontFamily: 'Arial Narrow' }}>
       <div
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}

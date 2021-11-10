@@ -19,7 +19,7 @@ class Routing extends React.Component {
     super();
     this.state = {
       animate: true,
-      showIntro: true
+      showIntro: true,
     };
     this.myRef = React.createRef();
   }
@@ -31,7 +31,11 @@ class Routing extends React.Component {
         <div ref={this.myRef}>
           <Router>
             <div>
-              {this.state.showIntro ? <NavBar /> : <NavBar style={{top: '0',position: 'sticky'}} />}
+              {this.state.showIntro ? (
+                <NavBar />
+              ) : (
+                <NavBar style={{ top: '0', position: 'sticky' }} />
+              )}
               <Switch>
                 <Route path="/projects" component={Projects} />
                 <Route path="/posts" component={Posts} />
@@ -51,13 +55,13 @@ class Routing extends React.Component {
     //AOS.init();
     if (window.sessionStorage.getItem('firstLoadDone') === null) {
       this.setState({
-        animate: true
+        animate: true,
       });
       window.sessionStorage.setItem('firstLoadDone', 1);
       document.body.style.overflow = 'hidden';
     } else {
       this.setState({
-        animate: false
+        animate: false,
       });
     }
 
@@ -65,7 +69,7 @@ class Routing extends React.Component {
       setTimeout(() => {
         this.myRef.current.scrollIntoView({
           behavior: 'smooth',
-          block: 'start'
+          block: 'start',
         });
         setTimeout(() => {
           document.body.style.overflow = 'unset';

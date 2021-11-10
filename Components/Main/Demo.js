@@ -294,7 +294,7 @@ export default function CardsGrow() {
                 postContent: '<p> Angular based website </p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -310,7 +310,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe the website </p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -326,7 +326,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe the portfolio</p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -344,7 +344,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe the android application </p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -360,7 +360,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe spark</p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -376,7 +376,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe the uni project</p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -394,7 +394,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe the asp .net website</p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -410,7 +410,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe how eigenvalues were found</p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
@@ -426,7 +426,7 @@ export default function CardsGrow() {
                 postContent: '<p> Describe the optimization</p>',
               },
             }}
-            style={{textDecoration:'none'}}
+            style={{ textDecoration: 'none' }}
           >
             <div>
               <Paper elevation={4} className={classes.paper}>
