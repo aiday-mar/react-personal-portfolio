@@ -1,9 +1,19 @@
 import { useLocation } from 'react-router-dom';
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import { posts } from './postsData.js';
+
+function getPost(id) {
+  const key = Object.keys(posts.results).find(index => posts.results[index].id === id)
+  return posts.results[key]
+}
 
 export default function Post() {
-  let location = useLocation();
-  const { postId, postTitle, postContent } = location.state;
+  //let location = useLocation();
+  //const { postId, postTitle, postContent } = location.state;
+
+  const { id } = useParams()
+  const post = getPost(id);
 
   return (
     <div style={{ fontFamily: 'Arial Narrow' }}>
@@ -15,11 +25,11 @@ export default function Post() {
           color: '#505e5a',
         }}
       >
-        {postTitle}
+        {post.title}
       </div>
       ,
       <div
-        dangerouslySetInnerHTML={{ __html: postContent }}
+        dangerouslySetInnerHTML={{ __html: post.title }}
         className="container-article"
         style={{ marginTop: 20 }}
       ></div>

@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { posts } from './postsData.js';
 
+/*
+state: {
+  postId: blog.id,
+  postTitle: blog.title,
+  postContent: blog.body,
+},
+*/
+
 export default function Posts() {
   return (
     <div class="outer-posts">
@@ -13,12 +21,7 @@ export default function Posts() {
                 <div class="hover-container">
                   <Link
                     to={{
-                      pathname: '/post', //  + blog.title.replace(/\s+/g, '-').toLowerCase()
-                      state: {
-                        postId: blog.id,
-                        postTitle: blog.title,
-                        postContent: blog.body,
-                      },
+                      pathname: '/post/' + blog.id,
                     }}
                     style={{
                       textDecoration: 'none',
