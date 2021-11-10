@@ -15,10 +15,17 @@ import 'aos/dist/aos.css';
 class Routing extends React.Component {
   constructor() {
     super();
-    this.state = {
-      animate: true,
-      showIntro: true,
-    };
+    if (window.location.pathname == '/') {
+      this.state = {
+        animate: true,
+        showIntro: true,
+      };
+    } else {
+      this.state = {
+        animate: false,
+        showIntro: false,
+      };
+    }
     this.myRef = React.createRef();
   }
 
