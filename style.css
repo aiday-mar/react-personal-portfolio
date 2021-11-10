@@ -4,7 +4,8 @@
 }
 
 .body {
-  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png');
+  /*background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png');*/
+  
   background-repeat: repeat;
   font-family: sans-serif, Garamond;
 }
