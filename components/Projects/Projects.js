@@ -13,12 +13,7 @@ export default function Projects() {
                 <div class="hover-container">
                   <Link
                     to={{
-                      pathname: '/project/' + blog.id,
-                      state: {
-                        postId: blog.id,
-                        postTitle: blog.title,
-                        postContent: blog.body,
-                      },
+                      pathname: '/project/' + blog.id
                     }}
                     style={{
                       textDecoration: 'none',

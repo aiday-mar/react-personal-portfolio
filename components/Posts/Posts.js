@@ -2,14 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { posts } from './postsData.js';
 
-/*
-state: {
-  postId: blog.id,
-  postTitle: blog.title,
-  postContent: blog.body,
-},
-*/
-
 export default function Posts() {
   return (
     <div class="outer-posts">

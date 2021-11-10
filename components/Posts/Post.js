@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { posts } from './postsData.js';

@@ -1,9 +1,17 @@
-import { useLocation } from 'react-router-dom';
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import { posts } from './projectsData.js';
+
+function getPost(id) {
+  const post = posts.results.filter(function (data) {
+    return data.id == id;
+  });
+  return post;
+}
 
 export default function Project() {
-  let location = useLocation();
-  const { postId, postTitle, postContent } = location.state;
+  const { id } = useParams();
+  const post = getPost(id);
 
   return (
     <div style={{ fontFamily: 'Arial Narrow' }}>
@@ -15,11 +23,11 @@ export default function Project() {
           color: '#505e5a',
         }}
       >
-        {postTitle}
+        {post[0].title}
       </div>
       ,
       <div
-        dangerouslySetInnerHTML={{ __html: postContent }}
+        dangerouslySetInnerHTML={{ __html: post[0].body }}
         className="container-article"
         style={{ marginTop: 20 }}
       ></div>

@@ -39,7 +39,7 @@ class Routing extends React.Component {
                 <Route exact path="/projects" component={Projects} />
                 <Route exact path="/posts" component={Posts} />
                 <Route path="/post/:id" component={Post} />
-                <Route path="/project" component={Project} />
+                <Route path="/project/:id" component={Project} />
                 <Route exact path="/about" component={About} />
               </Switch>
             </div>
