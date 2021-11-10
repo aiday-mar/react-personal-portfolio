@@ -22,5 +22,21 @@ export const posts = {
       body: 'Talk about the project for EPFL',
       icon: 'https://www.logiciels.pro/wp-content/uploads/2021/05/keras-avis-prix-alternatives-logiciel.webp',
     },
+    {
+      id: 4,
+      title:
+        'Creating a travelling website using Angular',
+      date: '13/09/2021',
+      body: 'Talk about the Angular project',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
+    },
+    {
+      id: 5,
+      title:
+        'Using GraphQL, Apollo and Websocket.IO to create a studying application',
+      date: '13/09/2021',
+      body: 'Talk about the GraphQL project',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/1200px-GraphQL_Logo.svg.png',
+    },
   ],
 };
