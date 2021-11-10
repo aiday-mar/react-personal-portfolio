@@ -13,7 +13,7 @@ export default function Posts() {
                 <div class="hover-container">
                   <Link
                     to={{
-                      pathname: '/post/' + blog.title.replace(/\s+/g, '-').toLowerCase(),
+                      pathname: '/post', //  + blog.title.replace(/\s+/g, '-').toLowerCase()
                       state: {
                         postId: blog.id,
                         postTitle: blog.title,
