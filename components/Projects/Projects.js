@@ -13,7 +13,7 @@ export default function Projects() {
                 <div class="hover-container">
                   <Link
                     to={{
-                      pathname: '/project',
+                      pathname: '/project/', //+ blog.title.replace(/\s+/g, '-').toLowerCase(),
                       state: {
                         postId: blog.id,
                         postTitle: blog.title,
