@@ -51,7 +51,8 @@ class Routing extends React.Component {
 
   componentDidMount() {
     //AOS.init();
-    if (this.props.location == '/') {
+
+    if (window.location.pathname == '/') {
       if (window.sessionStorage.getItem('firstLoadDone') === null) {
         this.setState({
           animate: true,
