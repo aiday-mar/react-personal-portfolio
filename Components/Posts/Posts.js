@@ -41,7 +41,7 @@ export default function Posts() {
               <div class="hover-container">
                   <Link to={{pathname: "/post", 
                   state: {postId : blog.id, postTitle : blog.title, postContent : blog.body}}} 
-                  style={{ textDecoration: 'none', display : 'flex' }}>
+                  style={{ textDecoration: 'none', display : 'flex', fontFamily: 'Arial Narrow'}}>
                     <img src={blog.icon} style={{width : 20, height : 20, marginRight : 10 }}/>
                     <div class="link-post">
                       {blog.title}
