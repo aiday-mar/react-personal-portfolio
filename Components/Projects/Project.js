@@ -9,7 +9,7 @@ export default function Project(){
   const { postId, postTitle, postContent } = location.state
 
   return (
-    <div>
+    <div style={{fontFamily: 'Arial Narrow'}}>
       <div style={{textAlign: "center", marginTop:25, fontSize : 20, color: "#505e5a"}}>{postTitle}</div>,
       <div dangerouslySetInnerHTML={{ __html: postContent }} className = "container-article" 
       style={{marginTop : 20}}></div>
