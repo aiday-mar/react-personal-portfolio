@@ -15,6 +15,7 @@ import 'aos/dist/aos.css';
 class Routing extends React.Component {
   constructor() {
     super();
+    console.log(window.location.pathname);
     if (window.location.pathname === '/') {
       this.state = {
         animate: true,
@@ -71,20 +72,20 @@ class Routing extends React.Component {
           animate: false,
         });
       }
-    }
 
-    if (this.state.animate == true) {
-      setTimeout(() => {
-        this.myRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
+      if (this.state.animate == true) {
         setTimeout(() => {
-          document.body.style.overflow = 'unset';
-          this.state.showIntro = false;
-          this.forceUpdate();
-        }, 1000);
-      }, 6000);
+          this.myRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+          setTimeout(() => {
+            document.body.style.overflow = 'unset';
+            this.state.showIntro = false;
+            this.forceUpdate();
+          }, 1000);
+        }, 6000);
+      }
     }
   }
 }

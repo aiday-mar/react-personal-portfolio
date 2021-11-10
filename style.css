@@ -23,7 +23,7 @@ a:focus {
   color: #ffffff;
   text-decoration: none;
   position: relative;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .navbarLink::after {
