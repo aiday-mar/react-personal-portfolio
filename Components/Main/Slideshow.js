@@ -1,4 +1,5 @@
 import React from 'react';
+
 const colors = ['#ffffff', '#ffffff', '#ffffff'];
 const text = [
   "Welcome to my portfolio! On this website you may find the work I have previously done in software engineering and data science. You can find my projects below as well as under 'projects'. You may also find my posts about what I learned under 'posts'. Click on the next dot to see more.",

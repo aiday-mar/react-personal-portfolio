@@ -8,10 +8,8 @@ import Projects from './Components/Projects/Projects';
 import Intro from './Components/Intro/Intro';
 import About from './Components/About/About';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useEffect } from 'react';
 import NavBar from './navBar.js';
 import './style.css';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 class Routing extends React.Component {
