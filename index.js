@@ -51,16 +51,18 @@ class Routing extends React.Component {
 
   componentDidMount() {
     //AOS.init();
-    if (window.sessionStorage.getItem('firstLoadDone') === null) {
-      this.setState({
-        animate: true,
-      });
-      window.sessionStorage.setItem('firstLoadDone', 1);
-      document.body.style.overflow = 'hidden';
-    } else {
-      this.setState({
-        animate: false,
-      });
+    if (this.props.location == '/') {
+      if (window.sessionStorage.getItem('firstLoadDone') === null) {
+        this.setState({
+          animate: true,
+        });
+        window.sessionStorage.setItem('firstLoadDone', 1);
+        document.body.style.overflow = 'hidden';
+      } else {
+        this.setState({
+          animate: false,
+        });
+      }
     }
 
     if (this.state.animate == true) {
