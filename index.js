@@ -15,7 +15,7 @@ import 'aos/dist/aos.css';
 class Routing extends React.Component {
   constructor() {
     super();
-    if (window.location.pathname == '/') {
+    if (window.location.pathname === '/') {
       this.state = {
         animate: true,
         showIntro: true,
@@ -59,7 +59,7 @@ class Routing extends React.Component {
   componentDidMount() {
     //AOS.init();
 
-    if (window.location.pathname == '/') {
+    if (window.location.pathname === '/') {
       if (window.sessionStorage.getItem('firstLoadDone') === null) {
         this.setState({
           animate: true,
