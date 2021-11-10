@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  font-family: sans-serif, Garamond;
 }
 
 a:visited,
@@ -13,7 +12,6 @@ a:focus {
 .body {
   /*background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png');*/
   background-repeat: repeat;
-  font-family: sans-serif, Garamond;
 }
 .NavBar {
   border-bottom: 1px groove rgb(221, 221, 221);
