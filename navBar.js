@@ -16,6 +16,7 @@ const NavBar = () => {
         paddingBottom: 10,
         display: 'flex',
         justifyContent: 'center',
+        fontFamily: 'Garamond',
       }}>
         <div style={{ backgroundColor: '#ffffff', marginRight : 10, borderRadius: 5, color : "#1f2833", padding : 5, fontSize : 22, fontFamily : "consolas"}}>
           &#60;Coding&#47;&#62;
@@ -31,16 +32,16 @@ const NavBar = () => {
       <div className="NavBar">
         <ul id="navigation-ul">
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', marginLeft : 40, padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/">Home</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', marginLeft : 40, padding:5, borderRadius: '5px', overflow: 'hidden', fontFamily: 'Arial Narrow'}} to="/">HOME</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/posts">Posts</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', padding:5, borderRadius: '5px', overflow: 'hidden', fontFamily: 'Arial Narrow'}} to="/posts">POSTS</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/projects">Projects</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', padding:5, borderRadius: '5px', overflow: 'hidden', fontFamily: 'Arial Narrow'}} to="/projects">PROJECTS</NavLink>
           </li>
           <li id="navigation-li">
-            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', marginRight : 40, padding:5, borderRadius: '5px', overflow: 'hidden'}} to="/about">Aiday Marlen Kyzy</NavLink>
+            <NavLink className="navbarLink" activeStyle={{ color:'#ffffff' }} style={{ color: '#ffffff', textDecoration: 'none', marginRight : 40, padding:5, borderRadius: '5px', overflow: 'hidden', fontFamily: 'Arial Narrow'}} to="/about">Aiday Marlen Kyzy</NavLink>
           </li>
         </ul>
       </div>
