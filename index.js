@@ -15,7 +15,8 @@ import 'aos/dist/aos.css';
 class Routing extends React.Component {
   constructor() {
     super();
-    console.log(window.location.pathname);
+    this.state = { isLoading: true };
+
     if (window.location.pathname === '/') {
       this.state = {
         animate: true,
@@ -32,6 +33,8 @@ class Routing extends React.Component {
 
   render() {
     return (
+      this.state.isLoading ? 
+      "Loading" :
       <div className="Body">
         {this.state.animate && this.state.showIntro ? <Intro /> : null}
         <div ref={this.myRef}>
@@ -59,6 +62,8 @@ class Routing extends React.Component {
 
   componentDidMount() {
     //AOS.init();
+
+    this.setState({ isLoading: false });
 
     if (window.location.pathname === '/') {
       if (window.sessionStorage.getItem('firstLoadDone') === null) {
