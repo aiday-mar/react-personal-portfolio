@@ -13,9 +13,12 @@ import './style.css';
 import 'aos/dist/aos.css';
 
 class Routing extends React.Component {
+  state = {
+    loading: true,
+  };
+
   constructor() {
     super();
-    this.state = { isLoading: true };
 
     if (window.location.pathname === '/') {
       this.state = {
@@ -32,9 +35,7 @@ class Routing extends React.Component {
   }
 
   render() {
-    return this.state.isLoading ? (
-      'Loading'
-    ) : (
+    return (
       <div className="Body">
         {this.state.animate && this.state.showIntro ? <Intro /> : null}
         <div ref={this.myRef}>
@@ -63,7 +64,11 @@ class Routing extends React.Component {
   componentDidMount() {
     //AOS.init();
 
-    this.setState({ isLoading: false });
+    const el = document.querySelector('.loader-container');
+    if (el) {
+      el.remove(); // removing the spinner element
+      this.setState({ loading: false }); // showing the app
+    }
 
     if (window.location.pathname === '/') {
       if (window.sessionStorage.getItem('firstLoadDone') === null) {
