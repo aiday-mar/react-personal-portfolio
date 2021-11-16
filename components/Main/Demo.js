@@ -279,7 +279,6 @@ const CardRight3 = withStyles(styles)(CardPannelRight3);
 export default function CardsGrow() {
   const classes = useStyles();
 
-  
   // data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'
   return (
     <div style={{ paddingBottom: '100px' }}>
@@ -303,7 +302,7 @@ export default function CardsGrow() {
           </Link>
           <Link
             to={{
-              pathname: '/project',
+              pathname: '/project/5',
               state: {
                 postTitle: 'React, Websocket.io, Node.js, GraphQL',
                 postContent: '<p> Describe the website </p>',
