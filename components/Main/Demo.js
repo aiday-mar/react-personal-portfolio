@@ -286,11 +286,7 @@ export default function CardsGrow() {
         <Box display="flex" justifyContent="center" mt="50px">
           <Link
             to={{
-              pathname: '/project',
-              state: {
-                postTitle: 'Angular, Three.js',
-                postContent: '<p> Angular based website </p>',
-              },
+              pathname: '/project/4',
             }}
             style={{ textDecoration: 'none' }}
           >
@@ -303,10 +299,6 @@ export default function CardsGrow() {
           <Link
             to={{
               pathname: '/project/5',
-              state: {
-                postTitle: 'React, Websocket.io, Node.js, GraphQL',
-                postContent: '<p> Describe the website </p>',
-              },
             }}
             style={{ textDecoration: 'none' }}
           >
@@ -318,11 +310,7 @@ export default function CardsGrow() {
           </Link>
           <Link
             to={{
-              pathname: '/project',
-              state: {
-                postTitle: 'React portfolio',
-                postContent: '<p> Describe the portfolio</p>',
-              },
+              pathname: '/project/6',
             }}
             style={{ textDecoration: 'none' }}
           >
@@ -336,11 +324,7 @@ export default function CardsGrow() {
         <Box display="flex" justifyContent="center" mt="50px">
           <Link
             to={{
-              pathname: '/project',
-              state: {
-                postTitle: 'Android Application',
-                postContent: '<p> Describe the android application </p>',
-              },
+              pathname: '/project/7',
             }}
             style={{ textDecoration: 'none' }}
           >
@@ -352,7 +336,7 @@ export default function CardsGrow() {
           </Link>
           <Link
             to={{
-              pathname: '/project',
+              pathname: '/project/1',
               state: {
                 postTitle: 'Spark',
                 postContent: '<p> Describe spark</p>',
@@ -368,11 +352,7 @@ export default function CardsGrow() {
           </Link>
           <Link
             to={{
-              pathname: '/project',
-              state: {
-                postTitle: 'Keras, Python',
-                postContent: '<p> Describe the uni project</p>',
-              },
+              pathname: '/project/3',
             }}
             style={{ textDecoration: 'none' }}
           >
@@ -386,11 +366,7 @@ export default function CardsGrow() {
         <Box display="flex" justifyContent="center" mt="50px">
           <Link
             to={{
-              pathname: '/project',
-              state: {
-                postTitle: 'ASP .NET',
-                postContent: '<p> Describe the asp .net website</p>',
-              },
+              pathname: '/project/8',
             }}
             style={{ textDecoration: 'none' }}
           >
@@ -402,7 +378,7 @@ export default function CardsGrow() {
           </Link>
           <Link
             to={{
-              pathname: '/project',
+              pathname: '/project/9',
               state: {
                 postTitle: 'C++ algorithms',
                 postContent: '<p> Describe how eigenvalues were found</p>',
@@ -418,11 +394,7 @@ export default function CardsGrow() {
           </Link>
           <Link
             to={{
-              pathname: '/project',
-              state: {
-                postTitle: 'MPI/CUDA',
-                postContent: '<p> Describe the optimization</p>',
-              },
+              pathname: '/project/2',
             }}
             style={{ textDecoration: 'none' }}
           >
