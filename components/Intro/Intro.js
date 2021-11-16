@@ -20,7 +20,7 @@ export default class Intro extends React.Component {
   render() {
     return (
       <div className="animation">
-        <div style={{ height: '40%', position: 'relative', top: '200px' }}>
+        <div style={{ position: 'relative', top: '200px' }}>
           <div className="tracking-in-expand" style={{ color: 'white' }}>
             Portfolio
           </div>

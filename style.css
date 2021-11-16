@@ -13,6 +13,7 @@ a:focus {
 .body {
   background-repeat: repeat;
 }
+
 .NavBar {
   border-bottom: 1px groove rgb(221, 221, 221);
   background-color: #1f2833;
@@ -156,7 +157,7 @@ a:focus {
   height: 100vh;
   background: linear-gradient(-45deg, #582dad, #23b7c4, #ffedfc);
   background-size: 100% 100%;
-  animation: gradient 5s ease infinite;
+  animation: gradient 3s ease infinite;
 }
 
 .Body {
