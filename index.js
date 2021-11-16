@@ -32,9 +32,9 @@ class Routing extends React.Component {
   }
 
   render() {
-    return (
-      this.state.isLoading ? 
-      "Loading" :
+    return this.state.isLoading ? (
+      'Loading'
+    ) : (
       <div className="Body">
         {this.state.animate && this.state.showIntro ? <Intro /> : null}
         <div ref={this.myRef}>
@@ -89,7 +89,7 @@ class Routing extends React.Component {
             this.state.showIntro = false;
             this.forceUpdate();
           }, 1000);
-        }, 6000);
+        }, 3000);
       }
     }
   }

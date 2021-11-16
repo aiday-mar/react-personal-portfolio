@@ -10,7 +10,6 @@ a:focus {
 }
 
 .body {
-  /*background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png');*/
   background-repeat: repeat;
 }
 .NavBar {
@@ -91,7 +90,6 @@ a:focus {
 
 /* Buttons */
 
-
 .slideshowDots {
   text-align: center;
 }
@@ -165,16 +163,16 @@ a:focus {
 }
 
 /* removing scrollbar */
+
 html {
   overflow: scroll;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
+  width: 0;
+  background: transparent;
 }
 
-/* block-$ */
 .block-effect {
   margin-top: 20px;
   font-size: 30px;
@@ -194,7 +192,7 @@ html {
   overflow: hidden;
 
   animation: revealBlock 0s var(--t) forwards;
-  --bc: #726689;
+  --bc: #e4a8ff;
   --d: 0.1s;
 }
 
@@ -208,7 +206,7 @@ html {
   overflow: hidden;
 
   animation: revealBlock 0s var(--t) forwards;
-  --bc: #65c3cb;
+  --bc: #59ffff;
   --d: 0.5s;
 }
 
@@ -245,9 +243,10 @@ html {
 }
 
 /* animations */
+
 @keyframes revealBlock {
   100% {
-    color: #0f0f0f;
+    color: white;
   }
 }
 
@@ -279,14 +278,6 @@ html {
   box-sizing: border-box;
 }
 
-/**
-body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-**/
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -299,11 +290,6 @@ body {
   }
 }
 
-/** links in post **/
-/* the code you want is around line 45  */
-
-/* --- this is the code you probably want ---- */
-
 .outer-posts {
   margin-top: 40px;
 }
@@ -314,11 +300,9 @@ body {
   width: 50%;
   margin: 0 auto;
   align-items: left;
-  /* justify-content: center; */
 }
 
 .hover-container {
-  /* text-align: center; */
   margin-bottom: 1em;
 }
 
@@ -338,11 +322,10 @@ body {
   background-color: #bb8bf4;
   position: absolute;
   left: 0;
-  bottom: -2px; /* this is to match where the border is */
+  bottom: -2px;
   transform-origin: left;
   transform: scale(0);
   transition: 0.5s linear;
-  /*   will-change: transform; */
 }
 
 .link-post:hover:before {
