@@ -50,7 +50,7 @@ const NavBar = () => {
           ></a>
           <a
             href="https://www.linkedin.com/in/aiday-marlen-kyzy/"
-            className="fa fa-linkedin"
+            className="fa fa-linkedin icon"
             style={{
               fontSize: 25,
               paddingLeft: 20,
