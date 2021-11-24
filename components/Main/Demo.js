@@ -60,7 +60,7 @@ function CardPannelLeft({ classes }) {
         </Typography>
         <Typography className={'MuiTypography--subheading'} variant={'caption'}>
           I have developed a travelling website using Angular, which integrates
-          shopping functionality and 3D animations
+          shopping functionality
         </Typography>
       </CardContent>
     </Card>
