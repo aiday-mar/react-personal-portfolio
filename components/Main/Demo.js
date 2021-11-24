@@ -281,7 +281,7 @@ export default function CardsGrow() {
 
   // data-aos="zoom-in" data-aos-offset='20' data-aos-once='true'
   return (
-    <div style={{ paddingBottom: '100px' }}>
+    <div style={{ paddingBottom: '100px'}}>
       <Box>
         <Box display="flex" justifyContent="center" mt="50px">
           <Link
