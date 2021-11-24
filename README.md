@@ -6,7 +6,7 @@ Link : https://aiday-marlen-kyzy.web.app/
 This portfolio website is built using React. This website has several key features.
 
 
-Routing
+<b> Routing </b>
 
 
 The routing in this portfolio is made with the react-router-dom library, specifically using the Switch and Route components. In order to be able to access the posts on this site, I parse the request URL by fetching the article corresponding to the ID in the URL, as follows :
