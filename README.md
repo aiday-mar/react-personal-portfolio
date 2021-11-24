@@ -11,10 +11,11 @@ This portfolio website is built using React. This website has several key featur
 
 The routing in this portfolio is made with the react-router-dom library, specifically using the Switch and Route components. In order to be able to access the posts on this site, I parse the request URL by fetching the article corresponding to the ID in the URL, as follows :
 
+```
 <Switch> <Route path='/post/:id' component={Post} /> </Switch>
+```
 
-
-Navigation Bar
+<b> Navigation Bar </b>
 
 
 The navigation bar is configured to be sticky, so that it sticks to the top of the navigation window.
