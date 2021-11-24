@@ -26,7 +26,7 @@ export const posts = {
       id: 4,
       title: 'Creating a travelling website using Angular',
       date: '13/09/2021',
-      body: '<b> little change <a href="https://github.com/aiday-mar/Angular-travel-app"> GitHub: https://github.com/aiday-mar/Angular-travel-app </a> </b> <br/><br/><br/>',
+      body: '<b><a href="https://travel-angular-aiday.web.app/">Live link: https://travel-angular-aiday.web.app/</a></b><br/><b> <a href="https://github.com/aiday-mar/Angular-travel-app"> GitHub: https://github.com/aiday-mar/Angular-travel-app </a> </b> <br/>See below for the description of the key features of the project.<br/><br/><br/><img src="https://raw.githubusercontent.com/aiday-mar/Angular-travel-app/master/Angular_Picture_1.PNG"/><br/><br/><img src="https://raw.githubusercontent.com/aiday-mar/Angular-travel-app/master/Angular_Picture_2.PNG"/><br/><br/><b>Customer support chat window</b><br/><br/><b>Booking interface</b><br/><br/><b>Payment with stripe</b><br/><br/><b>Material UI</b>',
       icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
     },
     {
