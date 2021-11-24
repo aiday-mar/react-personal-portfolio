@@ -99,7 +99,7 @@ componentDidMount() {
 <b> Material UI </b>
 
 
-The cards visible on the home page are made using the Material UI library. The cards are arranged inside of a box.
+The cards visible on the home page are made using the Material UI library. The cards are arranged inside of a Box.
 
 
 <b> Slideshow </b>
