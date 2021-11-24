@@ -2,7 +2,7 @@
 
 <b> Link </b> : https://aiday-marlen-kyzy.web.app/
 
-![Alt text](Capture.png?raw=true "Title")
+![alt text](https://github.com/aiday-mar/React-personal-portfolio/blob/master/Capture.PNG?raw=true)
 
 This portfolio website is built using React. This website has several key features.
 
