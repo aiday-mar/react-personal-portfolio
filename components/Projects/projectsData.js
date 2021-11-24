@@ -26,7 +26,7 @@ export const posts = {
       id: 4,
       title: 'Creating a travelling website using Angular',
       date: '13/09/2021',
-      body: '<b> <a href="https://github.com/aiday-mar/Angular-travel-app"> GitHub: https://github.com/aiday-mar/Angular-travel-app </a> </b> <br/><br/><br/>',
+      body: '<b> little change <a href="https://github.com/aiday-mar/Angular-travel-app"> GitHub: https://github.com/aiday-mar/Angular-travel-app </a> </b> <br/><br/><br/>',
       icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
     },
     {
