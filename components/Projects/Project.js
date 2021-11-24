@@ -23,6 +23,10 @@ export default function Project() {
           color: '#505e5a',
         }}
       >
+        <img
+          src={post[0].icon}
+          style={{ width: 20, height: 20, marginRight: 10 }}
+        />
         {post[0].title}
       </div>
       ,
