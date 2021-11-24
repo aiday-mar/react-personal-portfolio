@@ -48,7 +48,7 @@ function CardPannelLeft({ classes }) {
     <Card className={classes.card}>
       <CardMedia
         className={classes.media}
-        image={'https://miro.medium.com/max/724/1*QFD8QhUqbJhxT4LWahmsew.jpeg'}
+        image={'https://cpi.ch/wp-content/uploads/2021/07/Angular.png'}
       />
       <CardContent className={classes.content}>
         <Typography
@@ -56,7 +56,7 @@ function CardPannelLeft({ classes }) {
           variant={'h6'}
           gutterBottom
         >
-          Angular, Three.js
+          Angular
         </Typography>
         <Typography className={'MuiTypography--subheading'} variant={'caption'}>
           I have developed a travelling website using Angular, which integrates
