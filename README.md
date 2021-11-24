@@ -102,7 +102,7 @@ componentDidMount() {
 The cards visible on the home page are made using the Material UI library. The cards are arranged inside of a box.
 
 
-</b> Slideshow </b>
+<b> Slideshow </b>
 
 
 There is a slideshow on the main page where I introduce myself. The code for that is:
