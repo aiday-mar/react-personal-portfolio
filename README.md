@@ -21,11 +21,12 @@ The routing in this portfolio is made with the react-router-dom library, specifi
 The navigation bar is configured to be sticky, so that it sticks to the top of the navigation window.
 
 
-Introductory CSS animation
+<b> Introductory CSS animation </b>
 
 
 The CSS animations is displayed only once per session, and only when one accesses the main page of the website. That is if a person access a specific article, even on a new session, the CSS animation will not be displayed. The constructor in the routing component is as follows :
 
+```
 constructor() {
     super();
 
@@ -42,10 +43,11 @@ constructor() {
     }
     this.myRef = React.createRef();
 }
-
+```
 
 In the render method we have:
 
+```
 render() {
     return (
       <div className='Body'>
@@ -54,10 +56,11 @@ render() {
       </div>
     );
 }
-
+```
 
 And we have the following ComponentDidMount method:
 
+```
 componentDidMount() {
     const el = document.querySelector('.loader-container');
     if (el) {
@@ -91,19 +94,20 @@ componentDidMount() {
       }
     }
 }
+```
 
-
-Material UI
+<b> Material UI </b>
 
 
 The cards visible on the home page are made using the Material UI library. The cards are arranged inside of a box.
 
 
-Slideshow
+</b> Slideshow </b>
 
 
 There is a slideshow on the main page where I introduce myself. The code for that is:
 
+```
 export default function Slideshow() {
   const [index, setIndex] = React.useState(0);
   const timeoutRef = React.useRef(null);
@@ -140,3 +144,4 @@ export default function Slideshow() {
     </div>
   );
 }
+```
