@@ -170,10 +170,15 @@ html {
   overflow: scroll;
   overflow-x: hidden;
 }
+/*
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
+.code::-webkit-scrollbar * {
+  background: grey;
+}
+*/
 
 .block-effect {
   margin-top: 20px;
