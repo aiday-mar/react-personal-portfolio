@@ -2,6 +2,8 @@
 
 <b> Link </b> : https://aiday-marlen-kyzy.web.app/
 
+Note : This website was developed using StackBlitz, hence why some files are missing as compared to if I was developing locally on my computer. 
+
 ![alt text](https://github.com/aiday-mar/React-personal-portfolio/blob/master/Capture.PNG?raw=true)
 
 This portfolio website is built using React. This website has several key features.
