@@ -15,7 +15,7 @@
     "@react-firebase/firestore": "0.5.5",
     "@types/react": "17.0.16",
     "aos": "2.3.4",
-    "axios": "0.21.1",
+    "axios": "1.6.0",
     "bootstrap": "5.1.0",
     "cheerio": "0.22.0",
     "common": "0.2.5",
